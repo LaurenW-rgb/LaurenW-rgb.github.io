@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fluid Rate Calculator</title>
+    <script type="text/javascript" src="FluidRateCalculator.js"></script>
+</head>
+<body>
+
+<h1 style="font-family: Arial">Fluid Rate Calculator</h1>
+<label style="font-family: Arial" for="bodyweight">Bodyweight (kg):</label>
+<input type="number" id="bodyweight" name="bodyweight">
+<br>
+<br>
+<label style="font-family: Arial" for="fluidrate">Fluid Rate (ml/kg/day):</label>
+<input type="number" id="fluidrate" name="fluidrate">
+<br>
+<br>
+<label style="font-family: Arial" for="dropsperml">Drops Per ml:</label>
+<input type="number" id="dropsperml" name="dropsperml">
+<br>
+<br>
+<button style="font-family: Arial" onclick="calculateRate()">Submit</button>
+<br>
+<br>
+<p1 style="font-family: Arial" id="result"> </p1>
+
+</body>
+</html>
