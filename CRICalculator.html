@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>CRI Calculator</title>
+    <script type="text/javascript" src="CRICalculator.js"></script>
     <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
@@ -10,25 +12,23 @@
             font-family: Arial
         }
     </style>
-    <title>Fluid Rate Calculator</title>
-    <script type="text/javascript" src="FluidRateCalculator.js"></script>
 </head>
 <body>
 
-<h1>Fluid Rate Calculator</h1>
+<h1>CRI Calculator</h1>
 <label for="bodyWeight">Bodyweight (kg):</label>
 <input type="number" id="bodyWeight" name="bodyWeight">
 <br>
 <br>
-<label for="fluidRate">Fluid Rate (ml/kg/day):</label>
-<input type="number" id="fluidRate" name="fluidRate">
+<label for="CRIRate">CRI (mg/kg/hour):</label>
+<input type="number" id="CRIRate" name="CRIRate">
 <br>
 <br>
-<label for="dropsPerMl">Drops Per ml:</label>
-<input type="number" id="dropsPerMl" name="dropsPerMl">
+<label for="concentration">Concentration (mg/ml):</label>
+<input type="number" id="concentration" name="concentration">
 <br>
 <br>
-<button onclick="calculateFluidRate()">Submit</button>
+<button onclick="calculateCRIRate()">Submit</button>
 <br>
 <br>
 <p1 id="result"> </p1>

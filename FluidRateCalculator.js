@@ -1,12 +1,7 @@
-function calculateRate() {
-    var bodyweight = document.getElementById('bodyweight').value;
-    var fluidrate = document.getElementById('fluidrate').value;
-    var dropsperml = document.getElementById('dropsperml').value;
-
-    var result = (bodyweight * fluidrate * dropsperml)/86400
-    if (!isNaN(result))
-    {
-        document.getElementById("result").textContent= "Drops per second = " + result.toFixed(2);
-    }
+function calculateFluidRate() {
+    var bodyWeight = document.getElementById('bodyWeight').value;
+    var fluidrate = document.getElementById('fluidRate').value;
+    var dropsperml = document.getElementById('dropsPerMl').value;
+    var result = (bodyWeight * fluidrate * dropsperml)/86400
+    document.getElementById("result").textContent= "Drops per second = " + result.toFixed(2);
 }
-
