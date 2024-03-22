@@ -43,5 +43,5 @@ function calculateCRIRate() {
 
     var result = (bodyWeight * (doseMilligramsPerHour))/concentrationMilligrams;
 
-    document.getElementById("result").textContent= "ml/h = " + result.toFixed(1);
+    document.getElementById("result").textContent= "Infusion rate (millilitres per hour) = " + result.toFixed(1);
 }
