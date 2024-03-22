@@ -25,12 +25,12 @@
     <tr>
         <td><label for="CRIRate">Desired Dose Rate:</label></td>
         <td><input type="number" id="CRIRate" name="CRIRate"></td>
-        <td><select>
-            <option value="milligrams">milligrams</option>
-            <option value="micrograms">micrograms</option>
+        <td><select id="doseUnit">
+            <option value="milligramsDose">milligrams</option>
+            <option value="microgramsDose">micrograms</option>
         </select>
             <p1> per kilogram per </p1>
-            <select>
+            <select id="doseDuration">
                 <option value="second">second</option>
                 <option value="minute">minute</option>
                 <option value="hour">hour</option>
@@ -39,9 +39,9 @@
     <tr>
         <td><label for="concentration">Concentration:</label></td>
         <td><input type="number" id="concentration" name="concentration"></td>
-        <td><select>
-            <option value="milligrams">milligrams</option>
-            <option value="micrograms">micrograms</option>
+        <td><select id="concentrationUnit">
+            <option value="milligramsConc">milligrams</option>
+            <option value="microgramsConc">micrograms</option>
         </select>
             <p1> per millilitre </p1></td>
     </tr>
