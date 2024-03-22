@@ -16,34 +16,36 @@
 <body>
 
 <h1>CRI Calculator</h1>
-<label for="bodyWeight">Bodyweight:</label>
-<input type="number" id="bodyWeight" name="bodyWeight">
-<p1> kilograms </p1>
-<br>
-<br>
-<label for="CRIRate">Desired Dose Rate:</label>
-<input type="number" id="CRIRate" name="CRIRate">
-<select>
-    <option value="milligrams">milligrams</option>
-    <option value="micrograms">micrograms</option>
-</select>
-<p1> per kilogram per </p1>
-<select>
-    <option value="second">second</option>
-    <option value="minute">minute</option>
-    <option value="hour">hour</option>
-</select>
-<br>
-<br>
-<label for="concentration">Concentration:</label>
-<input type="number" id="concentration" name="concentration">
-<select>
-    <option value="milligrams">milligrams</option>
-    <option value="micrograms">micrograms</option>
-</select>
-<p1> per millilitre </p1>
-<br>
-<br>
+<table>
+    <tr>
+        <td><label for="bodyWeight">Bodyweight:</label></td>
+        <td><input type="number" id="bodyWeight" name="bodyWeight"></td>
+        <td>kilograms</td>
+    </tr>
+    <tr>
+        <td><label for="CRIRate">Desired Dose Rate:</label></td>
+        <td><input type="number" id="CRIRate" name="CRIRate"></td>
+        <td><select>
+            <option value="milligrams">milligrams</option>
+            <option value="micrograms">micrograms</option>
+        </select>
+            <p1> per kilogram per </p1>
+            <select>
+                <option value="second">second</option>
+                <option value="minute">minute</option>
+                <option value="hour">hour</option>
+            </select></td>
+    </tr>
+    <tr>
+        <td><label for="concentration">Concentration:</label></td>
+        <td><input type="number" id="concentration" name="concentration"></td>
+        <td><select>
+            <option value="milligrams">milligrams</option>
+            <option value="micrograms">micrograms</option>
+        </select>
+            <p1> per millilitre </p1></td>
+    </tr>
+</table>
 <button onclick="calculateCRIRate()">Submit</button>
 <br>
 <br>
