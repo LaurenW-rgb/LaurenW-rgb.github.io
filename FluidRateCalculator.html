@@ -16,18 +16,22 @@
 <body>
 
 <h1>Fluid Rate Calculator</h1>
-<label for="bodyWeight">Bodyweight (kg):</label>
-<input type="number" id="bodyWeight" name="bodyWeight">
-<br>
-<br>
-<label for="fluidRate">Fluid Rate (ml/kg/day):</label>
-<input type="number" id="fluidRate" name="fluidRate">
-<br>
-<br>
-<label for="dropsPerMl">Drops Per ml:</label>
-<input type="number" id="dropsPerMl" name="dropsPerMl">
-<br>
-<br>
+<table>
+    <tr>
+        <td><label for="bodyWeight">Bodyweight:</label></td>
+        <td><input type="number" id="bodyWeight" name="bodyWeight"></td>
+        <td>kilograms</td>
+    </tr>
+    <tr>
+        <td><label for="fluidRate">Fluid Rate:</label></td>
+        <td><input type="number" id="fluidRate" name="fluidRate"></td>
+        <td>ml/kg/day</td>
+    </tr>
+    <tr>
+        <td><label for="dropsPerMl">Drops Per ml:</label></td>
+        <td><input type="number" id="dropsPerMl" name="dropsPerMl"></td>
+    </tr>
+</table>
 <button onclick="calculateFluidRate()">Submit</button>
 <br>
 <br>
