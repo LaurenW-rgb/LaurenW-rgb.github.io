@@ -22,6 +22,8 @@
         <td><label for="bodyWeight">Bodyweight:</label></td>
         <td><input type="number" id="bodyWeight" name="bodyWeight"></td>
         <td>kilograms</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td><label for="doseRate">Desired Dose Rate:</label></td>
@@ -30,7 +32,11 @@
             <option value="milligramsDose">milligrams</option>
             <option value="microgramsDose">micrograms</option>
         </select>
+        </td>
+        <td>
             <p1> per kilogram per </p1>
+        </td>
+        <td>
             <select id="doseDuration">
                 <option value="hour">hour</option>
                 <option value="minute">minute</option>
@@ -44,7 +50,10 @@
             <option value="milligramsConc">milligrams</option>
             <option value="microgramsConc">micrograms</option>
         </select>
+        </td>
+        <td>
             <p1> per millilitre </p1></td>
+        <td></td>
     </tr>
 </table>
 <button onclick="calculateCRIRate()">Submit</button>
