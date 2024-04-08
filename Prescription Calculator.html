@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prescription Calculator</title>
+    <style>
+        html * {
+            font-family: Arial
+        }
+    </style>
+    <button onclick="location.href='index.html';">Home</button>
+    <script type="text/javascript" src="PrescriptionCalculator.js"></script>
+</head>
+
+<body>
+<h1>Prescription Calculator</h1>
+<table>
+    <tr>
+        <td><label for="firstAmount"> Give:</label></td>
+        <td><input type="number" id="firstAmount" name="firstAmount" style='width: 50px'></td>
+        <td>sachets/mls per day, <label for="firstDuration"> for:</label></td>
+        <td><input type="number" id="firstDuration" name="firstDuration" style='width: 50px'></td>
+        <td>weeks</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><label for="secondAmount"> Then give:</label></td>
+        <td><input type="number" id="secondAmount" name="secondAmount" style='width: 50px'></td>
+        <td>sachets/mls per day, <label for="secondDuration"> for:</label></td>
+        <td><input type="number" id="secondDuration" name="secondDuration" style='width: 50px'></td>
+        <td>weeks</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><label for="thirdAmount"> Then give:</label></td>
+        <td><input type="number" id="thirdAmount" name="thirdAmount" style='width: 50px'></td>
+        <td>sachets/mls per day, <label for="thirdDuration"> for:</label></td>
+        <td><input type="number" id="thirdDuration" name="thirdDuration" style='width: 50px'></td>
+        <td>weeks</td>
+        <td></td>
+    </tr>
+</table>
+<button onclick="calculatePrescription()">Submit</button>
+<br>
+<p1 id="totalPrescription"></p1>
+</body>
+</html>
