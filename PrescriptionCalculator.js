@@ -7,5 +7,5 @@ function calculatePrescription(){
     var thirdDuration = document.getElementById('thirdDuration').value;
 
     var totalPrescription = (firstAmount * firstDuration * 7) + (secondAmount * secondDuration * 7) + (thirdAmount * thirdDuration * 7);
-    document.getElementById("totalPrescription").textContent= "Total prescription = " + totalPrescription + "sachets/mls";
+    document.getElementById("totalPrescription").textContent= "Total prescription = " + totalPrescription + " sachets/mls";
 };
