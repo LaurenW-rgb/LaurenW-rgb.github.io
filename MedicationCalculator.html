@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Medication Calculator</title>
+    <script type="text/javascript" src="MedicationCalculator.js"></script>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=yes, viewport-fit=cover"
+    />
+    <style>
+        html * {
+            font-family: Arial
+        }
+    </style>
+</head>
+<button onclick="location.href='index.html';" >Home</button>
+<body>
+
+<h1>Medication Calculator</h1>
+<table>
+    <tr>
+        <td><label for="bodyWeight">Bodyweight:</label></td>
+        <td><input type="number" id="bodyWeight" name="bodyWeight" style='width: 50px'></td>
+        <td>kg</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><label for="dose">Dose:</label></td>
+        <td><input type="number" id="dose" name="dose" style='width: 50px'></td>
+        <td><select id="doseUnit">
+            <option value="milligramsDose">mg</option>
+            <option value="microgramsDose">μg</option>
+        </select>
+        </td>
+        <td>
+            <p1> per kg</p1>
+        </td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="concentration">Concentration:</label></td>
+        <td><input type="number" id="concentration" name="concentration" style='width: 50px'></td>
+        <td><select id="concentrationUnit">
+            <option value="milligramsConc">mg</option>
+            <option value="microgramsConc">μg</option>
+        </select>
+        </td>
+        <td>
+            <p1> per ml </p1></td>
+        <td></td>
+    </tr>
+</table>
+<button onclick="calculateMedication()">Submit</button>
+<br>
+<br>
+<p1 id="result"> </p1>
+
+</body>
+</html>
