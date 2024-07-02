@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Lidocaine Calculator</title>
+    <script type="text/javascript" src="LidocaineCalculator.js"></script>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=yes, viewport-fit=cover"
+    />
+    <style>
+        html * {
+            font-family: Arial, sans-serif
+        }
+    </style>
 </head>
+<button onclick="location.href='index.html';" >Home</button>
 <body>
-$END$
+<table>
+    <tr>
+        <td><label for="bodyWeight">Bodyweight:</label></td>
+        <td><input type="number" id="bodyWeight" name="bodyWeight" style='width: 50px'></td>
+        <td>kg</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><label for="concentration">Concentration:</label></td>
+        <td><input type="number" id="concentration" name="concentration" style='width: 50px'></td>
+        <td>mg/ml (note: usually 20mg/ml)</td>
+    </tr>
+</table>
+<button onclick="calculateLidocaineRates()">Submit</button>
+<br>
+<br>
+<p1 id="lidocaineBolusVolume"> </p1>
+<br>
+<p1 id="lidocaineBolusRate"> </p1>
+<br>
+<p1 id="lidocaineCRIRate"> </p1>
 </body>
 </html>
