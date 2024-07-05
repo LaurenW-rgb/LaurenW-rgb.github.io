@@ -20,14 +20,14 @@
 <table>
     <tr>
         <td><label for="bodyWeight">Bodyweight:</label></td>
-        <td><input type="number" id="bodyWeight" name="bodyWeight" style='width: 50px'></td>
+        <td><input type="number" min="1" id="bodyWeight" name="bodyWeight" style='width: 50px'></td>
         <td>kg</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td><label for="dose">Dose:</label></td>
-        <td><input type="number" id="dose" name="dose" style='width: 50px'></td>
+        <td><input type="number" min="1" id="dose" name="dose" style='width: 50px'></td>
         <td><select id="doseUnit">
             <option value="milligramsDose">mg</option>
             <option value="microgramsDose">μg</option>
@@ -41,7 +41,7 @@
     </tr>
     <tr>
         <td><label for="concentration">Concentration:</label></td>
-        <td><input type="number" id="concentration" name="concentration" style='width: 50px'></td>
+        <td><input type="number" min="1" id="concentration" name="concentration" style='width: 50px'></td>
         <td><select id="concentrationUnit">
             <option value="milligramsConc">mg</option>
             <option value="microgramsConc">μg</option>

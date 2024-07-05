@@ -19,15 +19,15 @@
 <table>
     <tr>
         <td><label for="bodyWeight">Bodyweight:</label></td>
-        <td><input type="number" id="bodyWeight" name="bodyWeight" style='width: 50px'></td>
+        <td><input type="number" min="1" id="bodyWeight" name="bodyWeight" style='width: 50px'></td>
         <td>kg</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td><label for="concentration">Concentration:</label></td>
-        <td><input type="number" id="concentration" name="concentration" style='width: 50px'></td>
-        <td>mg/ml (note: usually 20mg/ml)</td>
+        <td><input type="number" min="1" id="concentration" name="concentration" style='width: 50px'></td>
+        <td>mg/ml (usually 20mg/ml)</td>
     </tr>
 </table>
 <button onclick="calculateLidocaineRates()">Submit</button>
