@@ -1,0 +1,7 @@
+html * {
+    font-family: Arial, sans-serif
+}
+
+.carrot-icon {
+    background-image: url(/icons/carrot.svg);
+}
