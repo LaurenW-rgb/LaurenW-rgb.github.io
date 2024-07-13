@@ -4,4 +4,6 @@ html * {
 
 .carrot-icon {
     background-image: url(/icons/carrot.svg);
+    width: 55px;
+    height: 55px;
 }
