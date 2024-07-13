@@ -1,54 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <title>Feeding Calculator</title>
-    <script type="text/javascript" src="FeedingCalculator.js"></script>
-    <meta
+    <head>
+        <title>Feeding Calculator</title>
+        <script type="text/javascript" src="FeedingCalculator.js"></script>
+        <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=yes, viewport-fit=cover"
-    />
-    <style>
-        html * {
-            font-family: Arial, sans-serif
-        }
-    </style>
-</head>
-<button onclick="location.href='index.html';" >Home</button>
-<body>
-
-<h1>Feeding Calculator</h1>
-<table>
-    <tr>
-        <td><label for="bodyWeight">Bodyweight:</label></td>
-        <td><input type="number" min="1" id="bodyWeight" name="bodyWeight" style='width: 50px'></td>
-        <td>kg</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><label for="ration">Ration:</label></td>
-        <td><input type="number" min="1" id="ration" name="ration" style='width: 50px'></td>
-        <td>
-            <p>%</p>
-        </td>
-        <td>
-        </td>
-    </tr>
-    <tr>
-        <td><label for="feedingFrequency">Feeding frequency:</label></td>
-        <td> <p>every</p></td>
-        <td><input type="number" min="1" id="feedingFrequency" name="feedingFrequency" style='width: 50px'></td>
-        <td>
-            <p> hours </p></td>
-        <td></td>
-    </tr>
-</table>
-<button onclick="calculateFeeding()">Submit</button>
-<br>
-<br>
-<p1 id="totalFeed"> </p1>
-<br>
-<p1 id="perFeed"> </p1>
-
-</body>
+        />
+        <style>
+            html * {
+                font-family: Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <button onclick="location.href='index.html';">Home</button>
+    <body>
+        <h1>Feeding Calculator</h1>
+        <table>
+            <tr>
+                <td><label for="bodyWeight">Bodyweight:</label></td>
+                <td>
+                    <input
+                        type="number"
+                        min="1"
+                        id="bodyWeight"
+                        name="bodyWeight"
+                        style="width: 50px"
+                    />
+                </td>
+                <td>kg</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label for="ration">Ration:</label></td>
+                <td>
+                    <input
+                        type="number"
+                        min="1"
+                        id="ration"
+                        name="ration"
+                        style="width: 50px"
+                    />
+                </td>
+                <td>
+                    <p>%</p>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="feedingFrequency">Feeding frequency:</label>
+                </td>
+                <td><p>every</p></td>
+                <td>
+                    <input
+                        type="number"
+                        min="1"
+                        id="feedingFrequency"
+                        name="feedingFrequency"
+                        style="width: 50px"
+                    />
+                </td>
+                <td>
+                    <p>hours</p>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+        <button onclick="calculateFeeding()">Submit</button>
+        <br />
+        <br />
+        <p1 id="totalFeed"> </p1>
+        <br />
+        <p1 id="perFeed"> </p1>
+    </body>
 </html>

@@ -1,65 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <title>CRI Calculator</title>
-    <script type="text/javascript" src="CRICalculator.js"></script>
-    <meta
+    <head>
+        <title>CRI Calculator</title>
+        <script type="text/javascript" src="CRICalculator.js"></script>
+        <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=yes, viewport-fit=cover"
-    />
-    <style>
-        html * {
-            font-family: Arial, sans-serif
-        }
-    </style>
-</head>
-<button onclick="location.href='index.html';" >Home</button>
-<body>
-
-<h1>CRI Calculator</h1>
-<table>
-    <tr>
-        <td><label for="bodyWeight">Bodyweight:</label></td>
-        <td><input type="number" min="1" id="bodyWeight" name="bodyWeight" style='width: 50px'></td>
-        <td>kg</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><label for="doseRate">Desired Dose Rate:</label></td>
-        <td><input type="number" min="1" id="doseRate" name="doseRate" style='width: 50px'></td>
-        <td><select id="doseUnit">
-            <option value="milligramsDose">mg</option>
-            <option value="microgramsDose">μg</option>
-        </select>
-        </td>
-        <td>
-            <p1> per kg per </p1>
-        </td>
-        <td>
-            <select id="doseDuration">
-                <option value="hour">hour</option>
-                <option value="minute">minute</option>
-                <option value="second">second</option>
-            </select></td>
-    </tr>
-    <tr>
-        <td><label for="concentration">Concentration:</label></td>
-        <td><input type="number" min="1" id="concentration" name="concentration" style='width: 50px'></td>
-        <td><select id="concentrationUnit">
-            <option value="milligramsConc">mg</option>
-            <option value="microgramsConc">μg</option>
-        </select>
-        </td>
-        <td>
-            <p1> per ml </p1></td>
-        <td></td>
-    </tr>
-</table>
-<button onclick="calculateCRIRate()">Submit</button>
-<br>
-<br>
-<p1 id="result"> </p1>
-
-</body>
+        />
+        <style>
+            html * {
+                font-family: Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <button onclick="location.href='index.html';">Home</button>
+    <body>
+        <h1>CRI Calculator</h1>
+        <table>
+            <tr>
+                <td><label for="bodyWeight">Bodyweight:</label></td>
+                <td>
+                    <input
+                        type="number"
+                        min="1"
+                        id="bodyWeight"
+                        name="bodyWeight"
+                        style="width: 50px"
+                    />
+                </td>
+                <td>kg</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label for="doseRate">Desired Dose Rate:</label></td>
+                <td>
+                    <input
+                        type="number"
+                        min="1"
+                        id="doseRate"
+                        name="doseRate"
+                        style="width: 50px"
+                    />
+                </td>
+                <td>
+                    <select id="doseUnit">
+                        <option value="milligramsDose">mg</option>
+                        <option value="microgramsDose">μg</option>
+                    </select>
+                </td>
+                <td>
+                    <p1> per kg per </p1>
+                </td>
+                <td>
+                    <select id="doseDuration">
+                        <option value="hour">hour</option>
+                        <option value="minute">minute</option>
+                        <option value="second">second</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="concentration">Concentration:</label></td>
+                <td>
+                    <input
+                        type="number"
+                        min="1"
+                        id="concentration"
+                        name="concentration"
+                        style="width: 50px"
+                    />
+                </td>
+                <td>
+                    <select id="concentrationUnit">
+                        <option value="milligramsConc">mg</option>
+                        <option value="microgramsConc">μg</option>
+                    </select>
+                </td>
+                <td>
+                    <p1> per ml </p1>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+        <button onclick="calculateCRIRate()">Submit</button>
+        <br />
+        <br />
+        <p1 id="result"> </p1>
+    </body>
 </html>
