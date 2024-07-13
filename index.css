@@ -2,6 +2,10 @@ html * {
     font-family: Arial, sans-serif;
 }
 
+.homepage-heading {
+    text-align: center;
+}
+
 .icon {
     width: 55px;
     height: 55px;
@@ -36,6 +40,7 @@ html * {
     gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
+    row-gap: 35px;
 }
 
 .homepage-link {
@@ -43,4 +48,8 @@ html * {
     flex-direction: column;
     align-items: center;
     width: 100px;
+    gap: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
 }
