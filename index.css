@@ -2,10 +2,33 @@ html * {
     font-family: Arial, sans-serif;
 }
 
-.carrot-icon {
-    background-image: url(/icons/carrot.svg);
+.icon {
     width: 55px;
     height: 55px;
+}
+
+.carrot-icon {
+    background-image: url(/icons/carrot.svg);
+}
+
+.infusion-icon {
+    background-image: url(/icons/infusion.svg);
+}
+
+.drop-icon {
+    background-image: url(/icons/drop.svg);
+}
+
+.lidocaine-icon {
+    background-image: url(/icons/lidocaine.svg);
+}
+
+.medication-icon {
+    background-image: url(/icons/medication.svg);
+}
+
+.prescription-icon {
+    background-image: url(/icons/prescription.svg);
 }
 
 .homepage-nav {
