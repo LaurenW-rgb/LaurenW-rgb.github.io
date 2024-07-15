@@ -7,5 +7,13 @@ function calculateDilution() {
         document.getElementById("stockConcentration").value;
     var stockVolume =
         (desiredConcentration * desiredVolume) / stockConcentration;
-    document.getElementById("stockVolume").textContent = stockVolume.toFixed(1);
+
+    if (isNaN(stockVolume)) {
+        document.getElementById("stockConcentration").textContent = "0.0";
+    } else if (!isFinite(stockVolume)) {
+        document.getElementById("stockConcentration").textContent = "0.0";
+    } else {
+        document.getElementById("stockVolume").textContent =
+            stockVolume.toFixed(1);
+    }
 }
