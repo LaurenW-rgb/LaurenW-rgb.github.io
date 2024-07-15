@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+        />
+        <link rel="stylesheet" href="index.css" />
+        <script type="text/javascript" src="DilutionCalculator.js"></script>
+        <button onclick="location.href='index.html';">Home</button>
+        <title>Dilution Calculator</title>
+    </head>
+    <body>
+        <h1>Dilution Calculator</h1>
+        <table>
+            <tr>
+                <td>
+                    <label for="desiredConcentration"
+                        >Desired concentration:</label
+                    >
+                </td>
+                <td>
+                    <input
+                        type="number"
+                        min="0"
+                        id="desiredConcentration"
+                        name="desiredConcentration"
+                    />
+                </td>
+                <td>%</td>
+            </tr>
+            <tr>
+                <td><label for="desiredVolume">Desired volume:</label></td>
+                <td>
+                    <input
+                        type="number"
+                        min="0"
+                        id="desiredVolume"
+                        name="desiredVolume"
+                    />
+                </td>
+                <td>ml</td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="stockConcentration">Stock concentration:</label>
+                </td>
+                <td>
+                    <input
+                        type="number"
+                        min="0"
+                        id="stockConcentration"
+                        name="stockConcentration"
+                    />
+                </td>
+                <td>%</td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <button onclick="calculateDilution()">Submit</button>
+        <br />
+        <br />
+        <table class="outputs-table">
+            <tr>
+                <td>Volume to add (ml)</td>
+                <td id="stockVolume"></td>
+            </tr>
+        </table>
+    </body>
+</html>
