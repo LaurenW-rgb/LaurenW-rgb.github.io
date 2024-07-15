@@ -5,7 +5,7 @@ function calculateFluidRate() {
     var litresPerHour = (bodyWeight * fluidRate) / 24000;
     var dropsPerSecond = (bodyWeight * fluidRate * dropsPerMl) / 86400;
     document.getElementById("litresPerHour").textContent =
-        "Litres per hour = " + litresPerHour.toFixed(2);
+        litresPerHour.toFixed(1);
     document.getElementById("dropsPerSecond").textContent =
-        "Drops per second = " + dropsPerSecond.toFixed(2);
+        dropsPerSecond.toFixed(1);
 }

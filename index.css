@@ -53,3 +53,18 @@ html * {
     color: black;
     font-size: 13px;
 }
+
+.inputs-table {
+}
+
+.outputs-table {
+    tr:nth-child(odd) {
+        background-color: #9afce1;
+    }
+    tr:nth-child(even) {
+        background-color: #e0fff6;
+    }
+    td {
+        outline: #e0e0e0 solid thin;
+    }
+}

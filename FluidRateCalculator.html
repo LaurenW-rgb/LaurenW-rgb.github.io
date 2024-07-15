@@ -5,14 +5,10 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
         />
-        <style>
-            html * {
-                font-family: Arial;
-            }
-        </style>
+        <link rel="stylesheet" href="index.css" />
+        <script type="text/javascript" src="FluidRateCalculator.js"></script>
         <button onclick="location.href='index.html';">Home</button>
         <title>Fluid Rate Calculator</title>
-        <script type="text/javascript" src="FluidRateCalculator.js"></script>
     </head>
     <body>
         <h1>Fluid Rate Calculator</h1>
@@ -53,10 +49,20 @@
                 </td>
             </tr>
         </table>
+        <br />
+        <br />
         <button onclick="calculateFluidRate()">Submit</button>
         <br />
-        <p1 id="litresPerHour"> </p1>
         <br />
-        <p1 id="dropsPerSecond"> </p1>
+        <table class="outputs-table">
+            <tr>
+                <td>Litres per hour</td>
+                <td id="litresPerHour"></td>
+            </tr>
+            <tr>
+                <td>Drops per second</td>
+                <td id="dropsPerSecond"></td>
+            </tr>
+        </table>
     </body>
 </html>
