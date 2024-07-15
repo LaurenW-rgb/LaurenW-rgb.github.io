@@ -8,11 +8,11 @@ function calculateLidocaineRates(bodyWeight, concentration) {
     var lidocaineBolusRate = lidocaineBolusVolume * 4;
 
     document.getElementById("lidocaineBolusVolume").textContent =
-        "Lidocaine bolus volume (ml) = " + lidocaineBolusVolume.toFixed(1);
+        lidocaineBolusVolume.toFixed(1);
     document.getElementById("lidocaineBolusRate").textContent =
-        "Lidocaine bolus rate (ml/h) = " + lidocaineBolusRate.toFixed(1);
+        lidocaineBolusRate.toFixed(1);
 
     var lidocaineCRIRate = (bodyWeight * 3) / concentration;
     document.getElementById("lidocaineCRIRate").textContent =
-        "Lidocaine CRI rate (ml/h) = " + lidocaineCRIRate.toFixed(1);
+        lidocaineCRIRate.toFixed(1);
 }

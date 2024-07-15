@@ -68,7 +68,18 @@ html * {
     tr:nth-child(even) {
         background-color: #e0fff6;
     }
+
     td {
         outline: #e0e0e0 solid thin;
+        padding: 5px 15px 5px 10px;
+    }
+
+    td:first-child {
+        width: max-content;
+    }
+
+    td:nth-child(2) {
+        width: 150px;
+        text-align: center;
     }
 }
