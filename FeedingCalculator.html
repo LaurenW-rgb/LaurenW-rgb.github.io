@@ -17,7 +17,7 @@
     <button onclick="location.href='index.html';">Home</button>
     <body>
         <h1>Feeding Calculator</h1>
-        <table>
+        <table oninput="calculateFeeding()">
             <tr>
                 <td><label for="bodyWeight">Bodyweight:</label></td>
                 <td>
@@ -69,7 +69,6 @@
                 <td></td>
             </tr>
         </table>
-        <button onclick="calculateFeeding()">Submit</button>
         <br />
         <br />
         <p1 id="totalFeed"> </p1>

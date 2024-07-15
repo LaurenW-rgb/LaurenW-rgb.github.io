@@ -12,7 +12,7 @@
     </head>
     <body>
         <h1>Fluid Rate Calculator</h1>
-        <table>
+        <table oninput="calculateFluidRate()">
             <tr>
                 <td><label for="bodyWeight">Bodyweight:</label></td>
                 <td>
@@ -49,9 +49,6 @@
                 </td>
             </tr>
         </table>
-        <br />
-        <br />
-        <button onclick="calculateFluidRate()">Submit</button>
         <br />
         <br />
         <table class="outputs-table">

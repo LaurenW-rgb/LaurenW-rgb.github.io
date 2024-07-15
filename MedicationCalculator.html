@@ -18,7 +18,7 @@
     <button onclick="location.href='index.html';">Home</button>
     <body>
         <h1>Medication Calculator</h1>
-        <table>
+        <table oninput="calculateMedication()">
             <tr>
                 <td><label for="bodyWeight">Bodyweight:</label></td>
                 <td>
@@ -79,7 +79,6 @@
                 <td></td>
             </tr>
         </table>
-        <button onclick="calculateMedication()">Submit</button>
         <br />
         <br />
         <p id="result"></p>

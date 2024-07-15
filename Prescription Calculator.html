@@ -18,7 +18,7 @@
 
     <body>
         <h1>Prescription Calculator</h1>
-        <table>
+        <table oninput="calculatePrescription()">
             <tr>
                 <td><label for="firstAmount"> Give:</label></td>
                 <td>
@@ -116,8 +116,6 @@
                 <td></td>
             </tr>
         </table>
-        <br />
-        <button onclick="calculatePrescription()">Submit</button>
         <br />
         <br />
         <p1 id="totalPrescription"></p1>

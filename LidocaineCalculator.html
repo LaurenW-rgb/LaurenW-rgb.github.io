@@ -17,7 +17,7 @@
     <button onclick="location.href='index.html';">Home</button>
     <body>
         <h1>Lidocaine Calculator</h1>
-        <table>
+        <table oninput="calculateLidocaineRates()">
             <tr>
                 <td><label for="bodyWeight">Bodyweight:</label></td>
                 <td>
@@ -47,7 +47,6 @@
                 <td>mg/ml (usually 20mg/ml)</td>
             </tr>
         </table>
-        <button onclick="calculateLidocaineRates()">Submit</button>
         <br />
         <br />
         <p1 id="lidocaineBolusVolume"> </p1>

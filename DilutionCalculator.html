@@ -12,7 +12,7 @@
     </head>
     <body>
         <h1>Dilution Calculator</h1>
-        <table>
+        <table oninput="calculateDilution()">
             <tr>
                 <td>
                     <label for="desiredConcentration"
@@ -56,9 +56,6 @@
                 <td>%</td>
             </tr>
         </table>
-        <br />
-        <br />
-        <button onclick="calculateDilution()">Submit</button>
         <br />
         <br />
         <table class="outputs-table">
