@@ -35,6 +35,10 @@ html * {
     background-image: url(/icons/prescription.svg);
 }
 
+.dilution-icon {
+    background-image: url(/icons/dilution.svg);
+}
+
 .homepage-nav {
     display: flex;
     gap: 12px;
