@@ -47,5 +47,11 @@ function calculateCRIRate() {
 
     var result = (bodyWeight * doseMilligramsPerHour) / concentrationMilligrams;
 
-    document.getElementById("result").textContent = result.toFixed(1);
+    if (isNaN(result)) {
+        document.getElementById("result").textContent = "0.0";
+    } else if (!isFinite(result)) {
+        document.getElementById("result").textContent = "0.0";
+    } else {
+        document.getElementById("result").textContent = result.toFixed(1);
+    }
 }
