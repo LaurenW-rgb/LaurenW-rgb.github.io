@@ -32,6 +32,5 @@ function calculateMedication() {
 
     var result = (bodyWeight * doseMilligrams) / concentrationMilligrams;
 
-    document.getElementById("result").textContent =
-        "Volume = " + result.toFixed(1) + "ml";
+    document.getElementById("result").textContent = result.toFixed(1);
 }

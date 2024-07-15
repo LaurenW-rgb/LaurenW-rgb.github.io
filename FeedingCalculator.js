@@ -8,8 +8,6 @@ function calculateFeeding() {
     var totalFeed = (bodyWeight * ration) / 100;
     var perFeed = totalFeed / (24 / feedingFrequency);
 
-    document.getElementById("totalFeed").textContent =
-        "Total over 24h = " + totalFeed + "kg";
-    document.getElementById("perFeed").textContent =
-        "Amount per feed = " + perFeed.toFixed(1) + "kg";
+    document.getElementById("totalFeed").textContent = totalFeed.toFixed(0);
+    document.getElementById("perFeed").textContent = perFeed.toFixed(1);
 }

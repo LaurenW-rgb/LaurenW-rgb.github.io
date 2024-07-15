@@ -56,6 +56,7 @@ function calculatePrescription() {
 
     var totalPrescription =
         firstAmountInDays + secondAmountInDays + thirdAmountInDays;
+
     document.getElementById("totalPrescription").textContent =
-        "Total prescription = " + totalPrescription + " sachets/mls";
+        totalPrescription;
 }
