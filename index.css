@@ -6,6 +6,13 @@ html * {
     text-align: center;
 }
 
+.calculator-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .icon {
     width: 55px;
     height: 55px;
@@ -71,7 +78,7 @@ html * {
     text-decoration: none;
     color: black;
     font-size: 15px;
-    vertical-align: last;
+    justify-content: left;
 }
 
 .inputs-table {
