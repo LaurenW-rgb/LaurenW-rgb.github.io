@@ -81,6 +81,17 @@ html * {
     justify-content: left;
 }
 
+.menu-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    gap: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
 .inputs-table {
     /*tr:nth-child(odd) {*/
     /*    background-color: #9afce1;*/
