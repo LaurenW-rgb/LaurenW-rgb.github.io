@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Medication Calculator - Powders</title>
+        <script type="text/javascript" src="MedicationCalculator-powders.js"></script>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=yes, viewport-fit=cover"
+        />
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="index.css" />
+        <style>
+            html * {
+                font-family: Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <nav>
+        <a href="index.html" class="home-link">
+            <div class="icon home-icon"></div>
+            Home
+        </a>
+        <a href="MedicationCalculator.html" class="home-link">
+            <div class="icon home-icon"></div>
+            Back
+        </a>
+    </nav>
+    <table oninput="calculatePowderMedication()">
+        <tr>
+            <td><label for="bodyWeight">Bodyweight:</label></td>
+            <td>
+                <input
+                        type="number"
+                        min="1"
+                        id="bodyWeight"
+                        name="bodyWeight"
+                        style="width: 50px"
+                />
+            </td>
+            <td>kg</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><label for="dose">Dose:</label></td>
+            <td>
+                <input
+                        type="number"
+                        min="1"
+                        id="dose"
+                        name="dose"
+                        style="width: 50px"
+                />
+            </td>
+            <td>
+                <p>mg per kg</p>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><label for="concentration">Concentration:</label></td>
+            <td>
+                <input
+                        type="number"
+                        min="1"
+                        id="concentration"
+                        name="concentration"
+                        style="width: 50px"
+                />
+            </td>
+            <td>
+                <p>mg per gram</p>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><label for="gramsPerUnit">Grams Per Scoop/Sachet:</label></td>
+            <td>
+                <input
+                        type="number"
+                        min="1"
+                        id="gramsPerUnit"
+                        name="gramsPerUnit"
+                        style="width: 50px"
+                />
+            </td>
+            <td>g</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <br/>
+    <br/>
+    <table class="outputs-table">
+        <tr>
+            <td>Total quantity (g)</td>
+            <td id="totalGrams"></td>
+        </tr>
+        <tr>
+            <td>Scoops/sachets</td>
+            <td id="scoopsOrSachets"></td>
+        </tr>
+</html>
