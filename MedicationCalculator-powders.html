@@ -30,7 +30,24 @@
     </nav>
     <body class="calculator-text">
         <h1>Medication Calculator - Powders</h1>
-        <table oninput="calculatePowderMedication()">
+        <table oninput="myFunction()">
+            <tr>
+                <td><label for="drug">Drug:</label></td>
+                <td>
+                    <select id="drug">
+                        <option value="select">Select</option>
+                        <option value="ventipulmin">
+                            Clenbuterol - Ventipulmin
+                        </option>
+                        >
+                        <option value="sucralfate">Sucralfate</option>
+                        <option value="equisolon">
+                            Prednisolone - Equisolon
+                        </option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </td>
+            </tr>
             <tr>
                 <td><label for="bodyWeight">Bodyweight:</label></td>
                 <td>
