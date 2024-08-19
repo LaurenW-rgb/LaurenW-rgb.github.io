@@ -18,6 +18,18 @@ html * {
     height: 55px;
 }
 
+.tub-icon {
+    background-image: url(/icons/tub.svg);
+}
+
+.reset-icon {
+    background-image: url(/icons/refresh.svg);
+}
+
+.back-icon {
+    background-image: url(/icons/back.svg);
+}
+
 .carrot-icon {
     background-image: url(/icons/carrot.svg);
 }

@@ -9,7 +9,21 @@ function calculatePowderMedication() {
     var totalGrams = (bodyWeight * dose) / concentration;
     var scoopsOrSachets = totalGrams / gramsPerUnit;
 
-    document.getElementById("totalGrams").textContent = totalGrams.toFixed(1);
-    document.getElementById("scoopsOrSachets").textContent =
-        scoopsOrSachets.toFixed(1);
+    if (isNaN(totalGrams)) {
+        document.getElementById("totalGrams").textContent = "0.0";
+    } else if (!isFinite(totalGrams)) {
+        document.getElementById("totalGrams").textContent = "0.0";
+    } else {
+        document.getElementById("totalGrams").textContent =
+            totalGrams.toFixed(1);
+    }
+
+    if (isNaN(scoopsOrSachets)) {
+        document.getElementById("scoopsOrSachets").textContent = "0.0";
+    } else if (!isFinite(scoopsOrSachets)) {
+        document.getElementById("scoopsOrSachets").textContent = "0.0";
+    } else {
+        document.getElementById("scoopsOrSachets").textContent =
+            scoopsOrSachets.toFixed(1);
+    }
 }
