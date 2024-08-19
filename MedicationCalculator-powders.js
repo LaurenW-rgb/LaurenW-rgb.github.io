@@ -5,13 +5,11 @@ function myFunction() {
 }
 
 function insertPreset() {
-    var drugPreset = document.getElementById("drug").value;
-    if ((drugPreset = "sucralfate")) {
+    if (document.getElementById("drug").value === "sucralfate") {
         document.getElementById("dose").value = 20;
         document.getElementById("concentration").value = 1000;
         document.getElementById("gramsPerUnit").value = 3;
-    }
-    if ((drugPreset = "equisolon")) {
+    } else if (document.getElementById("drug").value === "equisolon") {
         document.getElementById("dose").value = 1.1;
         document.getElementById("concentration").value = 33;
         document.getElementById("gramsPerUnit").value = 4.5;

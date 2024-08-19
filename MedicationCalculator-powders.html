@@ -30,11 +30,11 @@
     </nav>
     <body class="calculator-text">
         <h1>Medication Calculator - Powders</h1>
-        <table oninput="myFunction()">
+        <table oninput="calculatePowderMedication()">
             <tr>
                 <td><label for="drug">Drug:</label></td>
                 <td>
-                    <select id="drug">
+                    <select id="drug" oninput="myFunction()">
                         <option value="select">Select</option>
                         <option value="ventipulmin">
                             Clenbuterol - Ventipulmin
