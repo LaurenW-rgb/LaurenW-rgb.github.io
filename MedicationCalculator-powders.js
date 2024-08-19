@@ -16,13 +16,38 @@ function insertPreset() {
     }
 }
 
+function getConcentrationInMilligrams(rawConcentration, concentrationUnit) {
+    if (concentrationUnit === "milligramsConc") {
+        return rawConcentration * 1;
+    } else if (concentrationUnit === "microgramsConc") {
+        return rawConcentration / 1000;
+    }
+}
+
+function getDoseUnitInMilligrams(rawDose, doseUnit) {
+    if (doseUnit === "milligramsDose") {
+        return rawDose * 1;
+    } else if (doseUnit === "microgramsDose") {
+        return rawDose / 1000;
+    }
+}
+
 function calculatePowderMedication() {
     var bodyWeight = document.getElementById("bodyWeight").value;
-    var dose = document.getElementById("dose").value;
-    var concentration = document.getElementById("concentration").value;
     var gramsPerUnit = document.getElementById("gramsPerUnit").value;
 
-    var totalGrams = (bodyWeight * dose) / concentration;
+    var rawConcentration = document.getElementById("concentration").value;
+    var concentrationUnit = document.getElementById("concentrationUnit").value;
+    var concentrationMilligrams = getConcentrationInMilligrams(
+        rawConcentration,
+        concentrationUnit,
+    );
+
+    var rawDose = document.getElementById("dose").value;
+    var doseUnit = document.getElementById("doseUnit").value;
+    var doseMilligrams = getDoseUnitInMilligrams(rawDose, doseUnit);
+
+    var totalGrams = (bodyWeight * doseMilligrams) / concentrationMilligrams;
     var scoopsOrSachets = totalGrams / gramsPerUnit;
 
     if (isNaN(totalGrams)) {
