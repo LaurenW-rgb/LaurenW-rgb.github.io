@@ -74,6 +74,7 @@ function calculatePowderMedication() {
         document.getElementById("totalGrams").textContent =
             totalGrams.toFixed(1);
     }
+
     if (isNaN(scoopsOrSachets)) {
         document.getElementById("scoopsOrSachets").textContent = "";
     } else if (!isFinite(scoopsOrSachets)) {
