@@ -9,10 +9,20 @@ function insertPreset() {
         document.getElementById("dose").value = 20;
         document.getElementById("concentration").value = 1000;
         document.getElementById("gramsPerUnit").value = 3;
+        document.getElementById("doseUnit").value = "milligramsDose";
+        document.getElementById("concentrationUnit").value = "milligramsConc";
     } else if (document.getElementById("drug").value === "equisolon") {
         document.getElementById("dose").value = 1.1;
         document.getElementById("concentration").value = 33;
         document.getElementById("gramsPerUnit").value = 4.5;
+        document.getElementById("doseUnit").value = "milligramsDose";
+        document.getElementById("concentrationUnit").value = "milligramsConc";
+    } else if (document.getElementById("drug").value === "ventipulmin") {
+        document.getElementById("dose").value = 0.8;
+        document.getElementById("concentration").value = 16;
+        document.getElementById("gramsPerUnit").value = 10;
+        document.getElementById("doseUnit").value = "microgramsDose";
+        document.getElementById("concentrationUnit").value = "microgramsConc";
     }
 }
 
