@@ -23,6 +23,12 @@ function insertPreset() {
         document.getElementById("gramsPerUnit").value = 10;
         document.getElementById("doseUnit").value = "microgramsDose";
         document.getElementById("concentrationUnit").value = "microgramsConc";
+    } else {
+        document.getElementById("dose").value = null;
+        document.getElementById("concentration").value = null;
+        document.getElementById("gramsPerUnit").value = null;
+        document.getElementById("doseUnit").value = "milligramsDose";
+        document.getElementById("concentrationUnit").value = "milligramsConc";
     }
 }
 
