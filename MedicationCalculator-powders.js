@@ -11,7 +11,7 @@ function insertPreset() {
         document.getElementById("gramsPerUnit").value = 3;
         document.getElementById("doseUnit").value = "milligramsDose";
         document.getElementById("concentrationUnit").value = "milligramsConc";
-    } else if (document.getElementById("drug").value === "equisolon") {
+    } else if (document.getElementById("drug").value === "equisolonTub") {
         document.getElementById("dose").value = 1.1;
         document.getElementById("concentration").value = 33;
         document.getElementById("gramsPerUnit").value = 4.5;
@@ -23,6 +23,12 @@ function insertPreset() {
         document.getElementById("gramsPerUnit").value = 10;
         document.getElementById("doseUnit").value = "microgramsDose";
         document.getElementById("concentrationUnit").value = "microgramsConc";
+    } else if (document.getElementById("drug").value === "equisolonSachet") {
+        document.getElementById("dose").value = 1.1;
+        document.getElementById("concentration").value = 33;
+        document.getElementById("gramsPerUnit").value = 9;
+        document.getElementById("doseUnit").value = "milligramsDose";
+        document.getElementById("concentrationUnit").value = "milligramsConc";
     } else {
         document.getElementById("dose").value = null;
         document.getElementById("concentration").value = null;
