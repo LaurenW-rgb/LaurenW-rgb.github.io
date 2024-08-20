@@ -54,15 +54,21 @@ function calculatePrescription() {
         thirdDurationUnit,
     );
 
+    var gramsPerScoop = 3;
+    var gramsPerTub = 250;
+
     if (document.getElementById("drug").textContent === "ventipulmin") {
-        var gramsPerScoop = 10;
-        var gramsPerTub = 500;
+        gramsPerScoop = 10;
+        gramsPerTub = 500;
     } else if (document.getElementById("drug").textContent === "sucralfate") {
         gramsPerScoop = 3;
         gramsPerTub = 250;
     } else if (document.getElementById("drug").textContent === "equisolon") {
         gramsPerScoop = 4.5;
         gramsPerTub = 180;
+    } else if (document.getElementById("drug").textContent === "custom") {
+        gramsPerScoop = 0;
+        gramsPerTub = 0;
     }
 
     var totalScoops =
@@ -70,7 +76,7 @@ function calculatePrescription() {
     var totalGrams = totalScoops * gramsPerScoop;
     var totalTubs = totalGrams / gramsPerTub;
 
-    document.getElementById("totalScoops").textContent = totalScoops;
-    document.getElementById("totalGrams").textContent = totalGrams;
-    document.getElementById("totalTubs").textContent = totalTubs;
+    document.getElementById("totalScoops").textContent = totalScoops.toFixed(1);
+    document.getElementById("totalGrams").textContent = totalGrams.toFixed(1);
+    document.getElementById("totalTubs").textContent = totalTubs.toFixed(1);
 }
