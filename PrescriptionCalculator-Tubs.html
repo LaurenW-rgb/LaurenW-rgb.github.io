@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Prescription Calculator</title>
+        <script
+            type="text/javascript"
+            src="PrescriptionCalculator-Tubs.js"
+        ></script>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=yes, viewport-fit=cover"
+        />
+        <link rel="stylesheet" href="index.css" />
+        <style>
+            html * {
+                font-family: Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <body class="calculator-text">
+        <nav>
+            <a href="index.html" class="menu-link">
+                <div class="icon home-icon"></div>
+                Home
+            </a>
+            <a href="PrescriptionCalculator.html" class="menu-link">
+                <div class="icon back-icon"></div>
+                Back
+            </a>
+            <a href="PrescriptionCalculator-Tubs.html" class="menu-link">
+                <div class="icon reset-icon"></div>
+                Reset
+            </a>
+        </nav>
+        <h1>Prescription Calculator</h1>
+        <table oninput="calculatePrescription()" class="inputs-table">
+            <tr>
+                <td><label for="drug">Drug:</label></td>
+                <td>
+                    <select id="drug" oninput="myFunction()">
+                        <option value="select">Select</option>
+                        <option value="ventipulmin">
+                            Clenbuterol - Ventipulmin
+                        </option>
+                        >
+                        <option value="sucralfate">Sucralfate</option>
+                        <option value="equisolon">
+                            Prednisolone - Equisolon Tub
+                        </option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="firstAmount"> Give:</label></td>
+                <td>
+                    <input
+                        type="number"
+                        min="0"
+                        id="firstAmount"
+                        name="firstAmount"
+                        style="width: 50px"
+                    />
+                </td>
+                <td>
+                    sachets/mls per day,
+                    <label for="firstDuration"> for:</label>
+                </td>
+                <td>
+                    <input
+                        type="number"
+                        min="0"
+                        id="firstDuration"
+                        name="firstDuration"
+                        style="width: 50px"
+                    />
+                </td>
+                <td>
+                    <select id="firstDurationUnit">
+                        <option value="durationDays">days</option>
+                        <option value="durationWeeks">weeks</option>
+                    </select>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label for="secondAmount"> Then give:</label></td>
+                <td>
+                    <input
+                        type="number"
+                        min="0"
+                        id="secondAmount"
+                        name="secondAmount"
+                        style="width: 50px"
+                    />
+                </td>
+                <td>
+                    sachets/mls per day,
+                    <label for="secondDuration"> for:</label>
+                </td>
+                <td>
+                    <input
+                        type="number"
+                        min="0"
+                        id="secondDuration"
+                        name="secondDuration"
+                        style="width: 50px"
+                    />
+                </td>
+                <td>
+                    <select id="secondDurationUnit">
+                        <option value="durationDays">days</option>
+                        <option value="durationWeeks">weeks</option>
+                    </select>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label for="thirdAmount"> Then give:</label></td>
+                <td>
+                    <input
+                        type="number"
+                        min="0"
+                        id="thirdAmount"
+                        name="thirdAmount"
+                        style="width: 50px"
+                    />
+                </td>
+                <td>
+                    sachets/mls per day,
+                    <label for="thirdDuration"> for:</label>
+                </td>
+                <td>
+                    <input
+                        type="number"
+                        min="0"
+                        id="thirdDuration"
+                        name="thirdDuration"
+                        style="width: 50px"
+                    />
+                </td>
+                <td>
+                    <select id="thirdDurationUnit">
+                        <option value="durationDays">days</option>
+                        <option value="durationWeeks">weeks</option>
+                    </select>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <table class="outputs-table">
+            <tr>
+                <td>Total scoops</td>
+                <td id="totalScoops"></td>
+            </tr>
+            <tr>
+                <td>Total grams</td>
+                <td id="totalGrams"></td>
+            </tr>
+            <tr>
+                <td>Total tubs</td>
+                <td id="totalTubs"></td>
+            </tr>
+        </table>
+    </body>
+</html>
