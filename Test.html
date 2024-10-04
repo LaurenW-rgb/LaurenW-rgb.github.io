@@ -89,10 +89,12 @@
                         </select>
                     </div>
                 </div>
-                <button type="submit" class="button">Calculate</button>
+                <button type="submit" class="button" onclick="displayResults()">
+                    Calculate
+                </button>
             </form>
 
-            <section class="results">
+            <section hidden id="resultsTable">
                 <h2>Results</h2>
                 <table class="outputs-table">
                     <tr>
