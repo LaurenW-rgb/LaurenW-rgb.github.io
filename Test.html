@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Test Calculator</title>
+        <script type="text/javascript" src="Test.js"></script>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=yes, viewport-fit=cover"
+        />
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="index.css" />
+        <style>
+            html * {
+                font-family: Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <nav>
+        <a href="index.html" class="menu-link">
+            <div class="icon home-icon"></div>
+            Home
+        </a>
+        <a href="Test.html" class="menu-link">
+            <div class="icon reset-icon"></div>
+            Reset
+        </a>
+    </nav>
+    <body class="body">
+        <section>
+            <h1>Test Calculator</h1>
+            <form onsubmit="calculateMedication(event)">
+                <div class="div">
+                    <label class="label" for="bodyweight"> Bodyweight </label>
+                    <div class="input-wrapper">
+                        <input
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="1"
+                            id="bodyweight"
+                            name="bodyweight"
+                        />
+                        <div class="input-suffix" aria-hidden="true">kg</div>
+                    </div>
+                </div>
+                <div class="div">
+                    <label class="label" for="dose">Drug Dose</label>
+                    <div class="input-wrapper">
+                        <input
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="1"
+                            id="dose"
+                            name="dose"
+                        />
+                        <div class="input-suffix" aria-hidden="true">mg/kg</div>
+                    </div>
+                </div>
+                <div class="div">
+                    <label class="label" for="concentration"
+                        >Drug Concentration</label
+                    >
+                    <div class="input-wrapper">
+                        <input
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="1"
+                            id="concentration"
+                            name="concentration"
+                        />
+                        <div class="input-suffix" aria-hidden="true">mg/ml</div>
+                    </div>
+                </div>
+                <button type="submit" class="button">Calculate</button>
+            </form>
+
+            <section class="results">
+                <h2>Results</h2>
+                <table class="outputs-table">
+                    <tr>
+                        <td>Volume</td>
+                        <td id="result"></td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </body>
+</html>
