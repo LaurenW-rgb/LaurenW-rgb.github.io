@@ -54,7 +54,15 @@
                             id="dose"
                             name="dose"
                         />
-                        <div class="input-suffix" aria-hidden="true">mg/kg</div>
+                        <select
+                            class="input-suffix"
+                            aria-hidden="true"
+                            id="doseUnit"
+                            name="doseUnit"
+                        >
+                            <option value="milligramsDose">mg/kg</option>
+                            <option value="microgramsDose">ug/kg</option>
+                        </select>
                     </div>
                 </div>
                 <div class="div">
@@ -70,7 +78,15 @@
                             id="concentration"
                             name="concentration"
                         />
-                        <div class="input-suffix" aria-hidden="true">mg/ml</div>
+                        <select
+                            class="input-suffix"
+                            aria-hidden="true"
+                            id="concentrationUnit"
+                            name="concentrationUnit"
+                        >
+                            <option value="milligramsConc">mg/ml</option>
+                            <option value="microgramsConc">ug/ml</option>
+                        </select>
                     </div>
                 </div>
                 <button type="submit" class="button">Calculate</button>
