@@ -17,6 +17,11 @@ html * {
     align-items: center;
 }
 
+.main-section {
+    width: 100%;
+    max-width: 300px;
+}
+
 .label {
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -53,13 +58,14 @@ html * {
     appearance: none;
     max-width: 5.5em;
     flex: 0 1 auto;
-    z-index: 2;
     flex-direction: column;
     align-items: center;
 }
 
-.input:focus-visible {
-    outline: 3px solid;
+.input:focus-visible,
+.input-suffix:focus-visible {
+    outline: 2px solid;
+    z-index: 2;
 }
 
 .input-suffix {
