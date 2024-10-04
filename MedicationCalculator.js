@@ -17,7 +17,7 @@ function getDoseUnitInMilligrams(rawDose, doseUnit) {
 }
 
 function calculateMedication() {
-    var bodyweight = document.getElementById("bodyweight").value;
+    var bodyWeight = document.getElementById("bodyWeight").value;
 
     var rawConcentration = document.getElementById("concentration").value;
     var concentrationUnit = document.getElementById("concentrationUnit").value;
@@ -30,7 +30,7 @@ function calculateMedication() {
     var doseUnit = document.getElementById("doseUnit").value;
     var doseMilligrams = getDoseUnitInMilligrams(rawDose, doseUnit);
 
-    var result = (bodyweight * doseMilligrams) / concentrationMilligrams;
+    var result = (bodyWeight * doseMilligrams) / concentrationMilligrams;
 
     if (isNaN(result)) {
         document.getElementById("result").textContent = "0.0";
