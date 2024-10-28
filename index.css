@@ -22,6 +22,21 @@ html * {
     max-width: 300px;
 }
 
+.details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.5em;
+}
+
+summary {
+    font-weight: bold;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0.5em;
+}
+
 .label {
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
