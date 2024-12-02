@@ -91,7 +91,7 @@ details[open] summary {
     border-left-color: rgb(11, 12, 12);
 }
 
-input-suffix-select:focus-visible {
+.input-suffix-select:focus-visible {
     outline: 2px solid;
     z-index: 2;
 }
@@ -191,6 +191,14 @@ input-suffix-select:focus-visible {
     text-decoration: none;
     background-color: #a200db;
 }
+
+/*.button:focus-visible {*/
+/*    outline: 2px solid;*/
+/*    z-index: 2;*/
+/*    border-left-width: 2px;*/
+/*    border-left-style: solid;*/
+/*    border-left-color: rgb(11, 12, 12);*/
+/*}*/
 
 .resultsTable {
 }
