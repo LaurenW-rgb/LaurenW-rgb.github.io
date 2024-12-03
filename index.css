@@ -49,6 +49,10 @@ details[open] summary {
     align-items: start;
 }
 
+.input-and-output-section {
+    padding-bottom: 30px;
+}
+
 .input-wrapper {
     text-size-adjust: 100%;
     display: flex;
@@ -209,8 +213,28 @@ details[open] summary {
     transform: translateY(1px);
 }
 
-.resultsTable {
+.results-table {
+    table, th, td {
+        border: 2px solid black;
+    }
+    border-collapse: collapse;
+    td {
+        width: 100px;
+        padding: 0 5px 0 5px;
+    }
 }
+
+/*.result-heading {*/
+/*    td {*/
+/*        width: 50px*/
+/*    }*/
+/*}*/
+
+/*.result-data {*/
+/*    td {*/
+/*        width: 50px;*/
+/*    }*/
+/*}*/
 
 .homepage-heading {
     text-align: center;
