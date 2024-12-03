@@ -19,13 +19,18 @@ html * {
 
 .main-section {
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
 }
 
 .details {
     border: 1px solid #aaa;
     border-radius: 4px;
     padding: 0.5em;
+    width: 200px;
+}
+
+details[open] {
+    width: 100%;
 }
 
 summary {
