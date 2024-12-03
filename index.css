@@ -11,10 +11,10 @@ html * {
     text-size-adjust: 100%;
     margin: 0;
     background-color: #fff;
-    padding: 30px;
+    padding: 20px 0 0 300px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
 }
 
 .main-section {
@@ -330,6 +330,11 @@ details[open] summary {
     color: black;
     font-size: 15px;
     justify-content: left;
+}
+
+.nav {
+    display: flex;
+    align-items: start;
 }
 
 .menu-link {
