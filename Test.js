@@ -15,10 +15,10 @@ function getDoseUnitInMilligrams(rawDose, doseUnit) {
     }
 }
 
-function displayResults() {
-    var resultsTable = document.getElementById("resultsTable");
-    resultsTable.hidden = false;
-}
+// function displayResults() {
+//     var resultsTable = document.getElementById("resultsTable");
+//     resultsTable.hidden = false;
+// }
 
 function calculateMedication(e) {
     e.preventDefault();

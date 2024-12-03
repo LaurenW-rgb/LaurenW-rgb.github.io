@@ -1,89 +1,120 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta
+<head>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Fluid Rate Calculator</title>
+    <script type="text/javascript" src="FluidRateCalculator.js"></script>
+    <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
-        />
-        <link rel="stylesheet" href="index.css" />
-        <script type="text/javascript" src="FluidRateCalculator.js"></script>
-        <title>Fluid Rate Calculator</title>
-    </head>
-    <nav>
-        <a href="index.html" class="menu-link">
-            <div class="icon home-icon"></div>
-            Home
-        </a>
-        <a href="FluidRateCalculator.html" class="menu-link">
-            <div class="icon reset-icon"></div>
-            Reset
-        </a>
-    </nav>
-    <body class="calculator-text">
+    />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        html * {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<nav class="nav">
+    <a href="index.html" class="menu-link">
+        <div class="icon home-icon"></div>
+        Home
+    </a>
+    <a href="FluidRateCalculator.html" class="menu-link">
+        <div class="icon reset-icon"></div>
+        Reset
+    </a>
+</nav>
+<body class="body">
+<div>
+    <section class="input-and-output-section">
         <h1>Fluid Rate Calculator</h1>
-        <table oninput="calculateFluidRate()">
-            <tr>
-                <td><label for="bodyWeight">Bodyweight:</label></td>
-                <td>
+        <form onsubmit="calculateFluidRate(event)">
+            <div class="div">
+                <label class="label" for="bodyWeight">Bodyweight:</label>
+                <div class="input-wrapper">
                     <input
-                        type="number"
-                        min="0"
-                        id="bodyWeight"
-                        name="bodyWeight"
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="1"
+                            id="bodyWeight"
+                            name="bodyWeight"
+                            required
                     />
-                </td>
-                <td>kilograms</td>
-            </tr>
-            <tr>
-                <td><label for="fluidRate">Fluid Rate:</label></td>
-                <td>
+                    <div class="input-suffix" aria-hidden="true"> kg</div>
+                </div>
+            </div>
+            <div class="div">
+                <label class="label" for="fluidRate">Fluid Rate:</label>
+                <div class="input-wrapper">
                     <input
-                        type="number"
-                        min="0"
-                        id="fluidRate"
-                        name="fluidRate"
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="1"
+                            id="fluidRate"
+                            name="fluidRate"
+                            required
                     />
-                </td>
-                <td>ml/kg/day</td>
-            </tr>
-            <tr>
-                <td><label for="dropsPerMl">Drops Per ml:</label></td>
-                <td>
+                    <div class="input-suffix" aria-hidden="true">ml/kg/day</div>
+                </div>
+            </div>
+            <div class="div">
+                <label class=label for="dropsPerMl">Drops Per ml:</label>
+                <div class="input-wrapper">
                     <input
-                        type="number"
-                        min="0"
-                        id="dropsPerMl"
-                        name="dropsPerMl"
+                            class="input"
+                            step="any"
+                            type="number"
+                            min="0"
+                            id="dropsPerMl"
+                            name="dropsPerMl"
+                            required
                     />
-                </td>
-            </tr>
-            <tr>
-                <td><label for="litresLeft">Litres left hanging:</label></td>
-                <td>
+                </div>
+            </div>
+            <div class="div">
+                <label class=label for="litresLeft">Litres left hanging:</label>
+                <div class="input-wrapper">
                     <input
-                        type="number"
-                        min="0"
-                        id="litresLeft"
-                        name="litresLeft"
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="0"
+                            id="litresLeft"
+                            name="litresLeft"
                     />
-                </td>
-            </tr>
-        </table>
-        <br />
-        <br />
-        <table class="outputs-table">
-            <tr>
-                <td>Litres per hour</td>
-                <td id="litresPerHour"></td>
-            </tr>
-            <tr>
-                <td>Drops per second</td>
-                <td id="dropsPerSecond"></td>
-            </tr>
-            <tr>
-                <td>Time until run out</td>
-                <td id="timeLeft"></td>
-            </tr>
-        </table>
-    </body>
+                </div>
+            </div>
+            <button type="submit" class="button">
+                Calculate
+            </button>
+        </form>
+        <section>
+            <h2>Results</h2>
+            <table class="results-table">
+                <tr>
+                    <td>Litres per hour</td>
+                    <td id="litresPerHour"></td>
+                </tr>
+                <tr>
+                    <td>Drops per second</td>
+                    <td id="dropsPerSecond"></td>
+                </tr>
+                <tr>
+                    <td>Time until run out</td>
+                    <td id="timeLeft"></td>
+                </tr>
+            </table>
+        </section>
+    </section>
+    <section>
+        <details>
+            <summary></summary>
+        </details>
+    </section>
+</div>
+</body>
 </html>

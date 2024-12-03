@@ -215,12 +215,13 @@ details[open] summary {
 }
 
 .results-table {
+    table-layout: auto;
     table, th, td {
         border: 2px solid black;
     }
     border-collapse: collapse;
     td {
-        width: 100px;
+        /*width: 100px;*/
         padding: 0 5px 0 5px;
     }
 }
