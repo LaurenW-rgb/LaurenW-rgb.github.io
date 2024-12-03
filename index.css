@@ -11,15 +11,13 @@ html * {
     text-size-adjust: 100%;
     margin: 0;
     background-color: #fff;
-    padding: 20px 0 0 300px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
 }
 
-.main-section {
-    width: 100%;
-    max-width: 500px;
+.input-and-output-section {
+    padding-bottom: 30px;
 }
 
 .details {
@@ -54,9 +52,7 @@ details[open] summary {
     align-items: start;
 }
 
-.input-and-output-section {
-    padding-bottom: 30px;
-}
+
 
 .input-wrapper {
     text-size-adjust: 100%;
@@ -335,6 +331,7 @@ details[open] summary {
 .nav {
     display: flex;
     align-items: start;
+    transform: translateX(-35px) translateY(5px);
 }
 
 .menu-link {
