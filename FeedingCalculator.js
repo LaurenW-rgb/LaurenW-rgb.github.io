@@ -9,5 +9,5 @@ function calculateFeeding() {
     var perFeed = totalFeed / (24 / feedingFrequency);
 
     document.getElementById("totalFeed").textContent = totalFeed.toFixed(0);
-    document.getElementById("perFeed").textContent = perFeed.toFixed(3fi);
+    document.getElementById("perFeed").textContent = perFeed.toFixed(3);
 }
