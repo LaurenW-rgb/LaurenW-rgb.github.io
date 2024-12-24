@@ -223,10 +223,10 @@ details[open] summary {
     }
     border-collapse: collapse;
     td {
-        /*width: 100px;*/
-        padding: 0 5px 0 5px;
+        padding: 5px 23px 5px 8px;
     }
-    td:first-child {}
+    td:first-child {
+    }
     td:last-child {
         width: 100px;
     }
