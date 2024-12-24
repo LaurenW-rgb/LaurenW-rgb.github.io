@@ -28,7 +28,7 @@ html * {
 }
 
 details[open] {
-    width: 50%;
+    width: 100%;
 }
 
 summary {
