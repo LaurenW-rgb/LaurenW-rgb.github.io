@@ -44,6 +44,4 @@ function calculateMedication(e) {
         document.getElementById("result").textContent =
             result.toFixed(1) + "ml";
     }
-
-    // document.getElementById("result").width = "0";
 }

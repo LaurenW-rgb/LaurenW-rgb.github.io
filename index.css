@@ -202,6 +202,8 @@ details[open] summary {
     padding: 4px 9px 7px 6px;
     margin: 0 0 16px;
     box-shadow: none;
+    outline: 1px;
+    outline-offset: 1px;
 }
 
 .button:hover {
