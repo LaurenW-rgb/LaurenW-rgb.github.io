@@ -224,19 +224,15 @@ details[open] summary {
         /*width: 100px;*/
         padding: 0 5px 0 5px;
     }
+    td:first-child {}
+    td:last-child {
+        width: 100px;
+    }
 }
 
-/*.result-heading {*/
-/*    td {*/
-/*        width: 50px*/
-/*    }*/
-/*}*/
-
-/*.result-data {*/
-/*    td {*/
-/*        width: 50px;*/
-/*    }*/
-/*}*/
+.output-column {
+    padding: 0 50px;
+}
 
 .homepage-heading {
     text-align: center;
