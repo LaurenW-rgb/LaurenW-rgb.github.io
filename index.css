@@ -9,11 +9,11 @@ html * {
 
 .body {
     text-size-adjust: 100%;
-    margin: 0;
+    margin: 0 0 0 200px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
 }
 
 .input-and-output-section {
@@ -332,6 +332,7 @@ details[open] summary {
 .nav {
     display: flex;
     align-items: start;
+    margin: 0 0 0 50px;
     transform: translateX(-35px) translateY(5px);
 }
 
