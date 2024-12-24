@@ -26,7 +26,8 @@ function getDoseDurationInMilligramsPerHour(doseMilligrams, doseDuration) {
     }
 }
 
-function calculateCRIRate() {
+function calculateCRIRate(e) {
+    e.preventDefault();
     var bodyWeight = document.getElementById("bodyWeight").value;
 
     var rawConcentration = document.getElementById("concentration").value;

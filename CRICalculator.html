@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <title>CRI Calculator</title>
         <script type="text/javascript" src="CRICalculator.js"></script>
         <meta
@@ -15,7 +16,7 @@
             }
         </style>
     </head>
-    <nav>
+    <nav class="nav">
         <a href="index.html" class="menu-link">
             <div class="icon home-icon"></div>
             Home
@@ -25,83 +26,101 @@
             Reset
         </a>
     </nav>
-    <body class="calculator-text">
+    <body class="body">
+    <div>
+        <section class="input-and-output-section">
         <h1>CRI Calculator</h1>
-        <table oninput="calculateCRIRate()">
-            <tr>
-                <td><label for="bodyWeight">Bodyweight:</label></td>
-                <td>
+        <form onsubmit="calculateCRIRate(event)">
+            <div class="div">
+                <label class="label" for="bodyWeight">Bodyweight:</label>
+                <div class="input-wrapper">
                     <input
+                        class="input"
                         type="number"
+                        step="any"
                         min="1"
                         id="bodyWeight"
                         name="bodyWeight"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>kg</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><label for="doseRate">Desired Dose Rate:</label></td>
-                <td>
+                        required
+                        />
+                    <div class="input-suffix" aria-hidden="true">kg</div>
+                </div>
+            </div>
+            <div class="div">
+                <label class="label" for="doseRate">Desired dose rate:</label>
+                <div class="input-wrapper">
                     <input
+                        class="input"
                         type="number"
+                        step="any"
                         min="1"
                         id="doseRate"
                         name="doseRate"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>
-                    <select id="doseUnit">
+                        />
+                    <select
+                            class="input-suffix-select"
+                            aria-hidden="true"
+                            id="doseUnit"
+                            name="doseUnit"
+                    >
                         <option value="milligramsDose">mg</option>
-                        <option value="microgramsDose">μg</option>
+                        <option value="microgramsDose">ug</option>
                     </select>
-                </td>
-                <td>
-                    <p1> per kg per </p1>
-                </td>
-                <td>
-                    <select id="doseDuration">
+                    <div class="input-suffix" aria-hidden="true">per kg per</div>
+                    <select
+                            class="input-suffix-select"
+                            aria-hidden="true"
+                            id="doseDuration"
+                            name="doseDuration"
+                            >
                         <option value="hour">hour</option>
                         <option value="minute">minute</option>
                         <option value="second">second</option>
                     </select>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="concentration">Concentration:</label></td>
-                <td>
+                </div>
+            </div>
+            <div class="div">
+                <label class="label" for="concentration">Concentration:</label>
+                <div class="input-wrapper">
                     <input
-                        type="number"
-                        min="1"
-                        id="concentration"
-                        name="concentration"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>
-                    <select id="concentrationUnit">
-                        <option value="milligramsConc">mg</option>
-                        <option value="microgramsConc">μg</option>
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="1"
+                            id="concentration"
+                            name="concentration"
+                            />
+                    <select
+                            class="input-suffix-select"
+                            aria-hidden="true"
+                            id="concentrationUnit"
+                            name="concentrationUnit"
+                            >
+                        <option value="milligramsConc">mg per ml</option>
+                        <option value="microgramsConc">μg per ml</option>
                     </select>
-                </td>
-                <td>
-                    <p1> per ml </p1>
-                </td>
-                <td></td>
-            </tr>
-        </table>
-        <br />
-        <br />
-        <!--        <p1 id="result"> </p1>-->
-        <table class="outputs-table">
-            <tr>
-                <td>Infusion rate (ml/h)</td>
-                <td id="result"></td>
-            </tr>
-        </table>
+                </div>
+            </div>
+            <button type="submit" class="button">
+            Calculate
+            </button>
+        </form>
+        <section>
+            <h2>Results</h2>
+            <table class="results-table">
+                <tr>
+                    <td>Infusion rate (ml/h)</td>
+                    <td id="result"></td>
+                </tr>
+            </table>
+        </section>
+        </section>
+        <section>
+            <details class="details">
+                <summary>Tell me the maths</summary>
+
+            </details>
+        </section>
+    </div>
     </body>
 </html>
