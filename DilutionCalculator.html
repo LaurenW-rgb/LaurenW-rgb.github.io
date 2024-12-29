@@ -1,13 +1,20 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <title>Dilution Calculator</title>
+        <script type="text/javascript" src="DilutionCalculator.js"></script>
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
         />
+        <meta charset="UTF-8" />
         <link rel="stylesheet" href="index.css" />
-        <script type="text/javascript" src="DilutionCalculator.js"></script>
-        <title>Dilution Calculator</title>
+        <style>
+            html * {
+                font-family: Arial, sans-serif;
+            }
+        </style>
     </head>
     <nav>
         <a href="index.html" class="menu-link">
@@ -19,59 +26,75 @@
             Reset
         </a>
     </nav>
-    <body class="calculator-text">
-        <h1>Dilution Calculator</h1>
-        <table oninput="calculateDilution()">
-            <tr>
-                <td>
-                    <label for="desiredConcentration"
-                        >Desired concentration:</label
-                    >
-                </td>
-                <td>
-                    <input
-                        type="number"
-                        min="0"
-                        id="desiredConcentration"
-                        name="desiredConcentration"
-                    />
-                </td>
-                <td>%</td>
-            </tr>
-            <tr>
-                <td><label for="desiredVolume">Desired volume:</label></td>
-                <td>
-                    <input
-                        type="number"
-                        min="0"
-                        id="desiredVolume"
-                        name="desiredVolume"
-                    />
-                </td>
-                <td>ml</td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="stockConcentration">Stock concentration:</label>
-                </td>
-                <td>
-                    <input
-                        type="number"
-                        min="0"
-                        id="stockConcentration"
-                        name="stockConcentration"
-                    />
-                </td>
-                <td>%</td>
-            </tr>
-        </table>
-        <br />
-        <br />
-        <table class="outputs-table">
-            <tr>
-                <td>Volume to add (ml)</td>
-                <td id="stockVolume"></td>
-            </tr>
-        </table>
+    <body class="body">
+    <div>
+        <section class="input-and-output-section">
+            <h1>Dilution Calculator</h1>
+            <form onsubmit="calculateDilution(event)">
+                <div class="div">
+                    <label class="label" for="desiredConcentration">Desired concentration:</label>
+                    <div class="input-wrapper">
+                        <input
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="0"
+                            id="desiredConcentration"
+                            name="desiredConcentration"
+                            required
+                        />
+                        <div class="input-suffix" aria-hidden="true">%</div>
+                    </div>
+                </div>
+                <div class="div">
+                    <label class="label" for="desiredVolume">Desired volume:</label>
+                    <div class="input-wrapper">
+                        <input
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="0"
+                            id="desiredVolume"
+                            name="desiredVolume"
+                            required/>
+                        <div class="input-suffix" aria-hidden="true">ml</div>
+                    </div>
+                </div>
+                <div class="div">
+                    <label class="label" for="stockConcentration"> Stock concentration:</label>
+                    <div class="input-wrapper">
+                        <input
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="0"
+                            id="stockConcentration"
+                            name="stockConcentration"
+                            required
+                        />
+                        <div class="input-suffix" aria-hidden="true">%</div>
+                    </div>
+                </div>
+                <button type="submit" class="button">
+                    Calculate
+                </button>
+            </form>
+            <section>
+                <h2>Results</h2>
+                <table class="results-table">
+                    <tr>
+                        <td> Volume to add</td>
+                        <td id="stockVolume"></td>
+                        <td class="output-suffix" aria-hidden="true"> ml</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+        <section>
+            <details class="details">
+                <summary>Tell me the maths</summary>
+            </details>
+        </section>
+    </div>
     </body>
 </html>

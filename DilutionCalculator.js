@@ -1,4 +1,5 @@
-function calculateDilution() {
+function calculateDilution(e) {
+    e.preventDefault();
     var desiredConcentration = document.getElementById(
         "desiredConcentration",
     ).value;
