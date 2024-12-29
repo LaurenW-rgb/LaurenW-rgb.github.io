@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <title>Feeding Calculator</title>
         <script type="text/javascript" src="FeedingCalculator.js"></script>
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=yes, viewport-fit=cover"
         />
+        <meta charset="UTF-8" />
         <link rel="stylesheet" href="index.css" />
         <style>
             html * {
@@ -24,71 +26,81 @@
             Reset
         </a>
     </nav>
-    <body class="calculator-text">
-        <h1>Feeding Calculator</h1>
-        <table oninput="calculateFeeding()">
-            <tr>
-                <td><label for="bodyWeight">Bodyweight:</label></td>
-                <td>
-                    <input
-                        type="number"
-                        min="1"
-                        id="bodyWeight"
-                        name="bodyWeight"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>kg</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><label for="ration">Ration:</label></td>
-                <td>
-                    <input
-                        type="number"
-                        min="1"
-                        id="ration"
-                        name="ration"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>
-                    <p>%</p>
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="feedingFrequency">Feeding frequency:</label>
-                </td>
-                <td><p>every</p></td>
-                <td>
-                    <input
-                        type="number"
-                        min="1"
-                        id="feedingFrequency"
-                        name="feedingFrequency"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>
-                    <p>hours</p>
-                </td>
-                <td></td>
-            </tr>
-        </table>
-        <br />
-        <br />
-        <table class="outputs-table">
-            <tr>
-                <td>Total over 24h (kg)</td>
-                <td id="totalFeed"></td>
-            </tr>
-            <tr>
-                <td>Amount per feed (kg)</td>
-                <td id="perFeed"></td>
-            </tr>
-        </table>
+    <body class="body">
+    <div>
+        <section class="input-and-output-section">
+            <h1>Feeding Calculator</h1>
+            <form onsubmit="calculateFeeding(event)">
+                <div class="div">
+                    <label class="label" for="bodyWeight">Bodyweight:</label>
+                    <div class="input-wrapper">
+                        <input
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="0"
+                            id="bodyWeight"
+                            name="bodyWeight"
+                            required
+                            />
+                        <div class="input-suffix" aria-hidden="true">kg</div>
+                    </div>
+                </div>
+                <div class="div">
+                    <label class="label" for="ration">Ration:</label>
+                    <div class="input-wrapper">
+                        <input
+                                class="input"
+                                type="number"
+                                step="any"
+                                min="0"
+                                id="ration"
+                                name="ration"
+                                required
+                                />
+                        <div class="input-suffix" aria-hidden="true">%</div>
+                    </div>
+                </div>
+                <div class="div">
+                    <label class="label" for="feedingFrequency">Feeding interval:</label>
+                    <div class="input-wrapper">
+                        <input
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="0"
+                            id="feedingFrequency"
+                            name="feedingFrequency"
+                            required
+                            />
+                    <div class="input-suffix" aria-hidden="true">hours</div>
+                </div>
+                </div>
+                <button type="submit" class="button">
+                    Calculate
+                </button>
+            </form>
+            <section>
+                <h2>Results</h2>
+                <table class="results-table">
+                    <tr>
+                        <td>Total over 24 hours</td>
+                        <td id="totalFeed"></td>
+                        <td class="output-suffix">kg</td>
+                    </tr>
+                    <tr>
+                        <td>Amount per feed</td>
+                        <td id="perFeed"></td>
+                        <td class="output-suffix">kg</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+        <section>
+            <details>
+                <summary></summary>
+            </details>
+        </section>
+    </div>
     </body>
 </html>

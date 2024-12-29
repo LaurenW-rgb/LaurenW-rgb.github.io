@@ -1,6 +1,7 @@
 "use strict";
 
-function calculateFeeding() {
+function calculateFeeding(e) {
+    e.preventDefault();
     var bodyWeight = document.getElementById("bodyWeight").value;
     var ration = document.getElementById("ration").value;
     var feedingFrequency = document.getElementById("feedingFrequency").value;
