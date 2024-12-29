@@ -38,7 +38,7 @@
                         class="input"
                         type="number"
                         step="any"
-                        min="1"
+                        min="0"
                         id="bodyWeight"
                         name="bodyWeight"
                         required
@@ -53,29 +53,40 @@
                         class="input"
                         type="number"
                         step="any"
-                        min="1"
+                        min="0"
                         id="doseRate"
                         name="doseRate"
                         />
+<!--                    <select-->
+<!--                            class="input-suffix-select"-->
+<!--                            aria-hidden="true"-->
+<!--                            id="doseUnit"-->
+<!--                            name="doseUnit"-->
+<!--                    >-->
+<!--                        <option value="milligramsDose">mg</option>-->
+<!--                        <option value="microgramsDose">ug</option>-->
+<!--                    </select>-->
+<!--                    <div class="input-suffix" aria-hidden="true">per kg per</div>-->
+<!--                    <select-->
+<!--                            class="input-suffix-select"-->
+<!--                            aria-hidden="true"-->
+<!--                            id="doseDuration"-->
+<!--                            name="doseDuration"-->
+<!--                            >-->
+<!--                        <option value="hour">hour</option>-->
+<!--                        <option value="minute">minute</option>-->
+<!--                        <option value="second">second</option>-->
+<!--                    </select>-->
                     <select
-                            class="input-suffix-select"
-                            aria-hidden="true"
-                            id="doseUnit"
-                            name="doseUnit"
+                        class="input-suffix-select"
+                        aria-hidden="true"
+                        id="doseRateUnit"
+                        name="doseRateUnit"
                     >
-                        <option value="milligramsDose">mg</option>
-                        <option value="microgramsDose">ug</option>
-                    </select>
-                    <div class="input-suffix" aria-hidden="true">per kg per</div>
-                    <select
-                            class="input-suffix-select"
-                            aria-hidden="true"
-                            id="doseDuration"
-                            name="doseDuration"
-                            >
-                        <option value="hour">hour</option>
-                        <option value="minute">minute</option>
-                        <option value="second">second</option>
+                        <option value="mg/kg/h">mg per kg per hour</option>
+                        <option value="mg/kg/min">mg per kg per minute</option>
+                        <option value="ug/kg/h">ug per kg per hour</option>
+                        <option value="ug/kg/min">ug per kg per minute</option>
                     </select>
                 </div>
             </div>
@@ -86,7 +97,7 @@
                             class="input"
                             type="number"
                             step="any"
-                            min="1"
+                            min="0"
                             id="concentration"
                             name="concentration"
                             />

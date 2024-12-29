@@ -8,21 +8,15 @@ function getConcentrationInMilligrams(rawConcentration, concentrationUnit) {
     }
 }
 
-function getDoseUnitInMilligrams(rawDose, doseUnit) {
-    if (doseUnit === "milligramsDose") {
+function getRateInMilligramsPerHour(rawDose, doseRateUnit) {
+    if (doseRateUnit === "mg/kg/h") {
         return rawDose;
-    } else if (doseUnit === "microgramsDose") {
+    } else if (doseRateUnit === "mg/kg/min") {
+        return rawDose * 60;
+    } else if (doseRateUnit === "ug/kg/h") {
         return rawDose / 1000;
-    }
-}
-
-function getDoseDurationInMilligramsPerHour(doseMilligrams, doseDuration) {
-    if (doseDuration === "hour") {
-        return doseMilligrams;
-    } else if (doseDuration === "minute") {
-        return doseMilligrams * 60;
-    } else if (doseDuration === "second") {
-        return doseMilligrams * 3600;
+    } else if (doseRateUnit === "ug/kg/min") {
+        return rawDose * 0.006;
     }
 }
 
@@ -38,20 +32,15 @@ function calculateCRIRate(e) {
     );
 
     var rawDose = document.getElementById("doseRate").value;
-    var doseUnit = document.getElementById("doseUnit").value;
-    var doseDuration = document.getElementById("doseDuration").value;
-    var doseMilligrams = getDoseUnitInMilligrams(rawDose, doseUnit);
-    var doseMilligramsPerHour = getDoseDurationInMilligramsPerHour(
-        doseMilligrams,
-        doseDuration,
-    );
+    var doseRateUnit = document.getElementById("doseRateUnit").value;
+    var rateMilligramsPerHour = getRateInMilligramsPerHour(rawDose, doseRateUnit);
 
-    var result = (bodyWeight * doseMilligramsPerHour) / concentrationMilligrams;
+    var result = (bodyWeight * rateMilligramsPerHour) / concentrationMilligrams;
 
     if (isNaN(result)) {
-        document.getElementById("result").textContent = "0.0";
+        document.getElementById("result").textContent = "error";
     } else if (!isFinite(result)) {
-        document.getElementById("result").textContent = "0.0";
+        document.getElementById("result").textContent = "error";
     } else {
         document.getElementById("result").textContent = result.toFixed(1);
     }
