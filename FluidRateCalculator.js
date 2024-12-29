@@ -14,13 +14,5 @@ function calculateFluidRate(e) {
         litresPerHour.toFixed(1);
     document.getElementById("dropsPerSecond").textContent =
         dropsPerSecond.toFixed(1);
-
-    // if (isNaN(timeLeft)) {
-    //     document.getElementById("timeLeft").textContent = "-";
-    // } else if (!isFinite(timeLeft)) {
-    //     document.getElementById("timeLeft").textContent = "-";
-    // } else
-        document.getElementById("timeLeft").textContent = timeLeft.toFixed(1);
-
-        console.log("hello");
+    document.getElementById("timeLeft").textContent = timeLeft.toFixed(1);
 }

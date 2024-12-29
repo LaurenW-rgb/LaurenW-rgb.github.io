@@ -36,12 +36,5 @@ function calculateCRIRate(e) {
     var rateMilligramsPerHour = getRateInMilligramsPerHour(rawDose, doseRateUnit);
 
     var result = (bodyWeight * rateMilligramsPerHour) / concentrationMilligrams;
-
-    if (isNaN(result)) {
-        document.getElementById("result").textContent = "error";
-    } else if (!isFinite(result)) {
-        document.getElementById("result").textContent = "error";
-    } else {
-        document.getElementById("result").textContent = result.toFixed(1);
-    }
+    document.getElementById("result").textContent = result.toFixed(1);
 }
