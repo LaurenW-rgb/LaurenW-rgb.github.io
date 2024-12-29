@@ -111,16 +111,21 @@
                 <tr>
                     <td>Infusion rate (ml/h)</td>
                     <td id="result"></td>
-                </tr>
+                    <td class="output-suffix" aria-hidden="true"> ml per hour </td>
+            </tr>
             </table>
         </section>
         </section>
         <section>
             <details class="details">
                 <summary>Tell me the maths</summary>
-
+$$\textsf {Rate (ml/h)} = {{\textsf{bodyweight (kg)} \times \textsf{dose rate (mg/kg/h)}}\over \textsf{concentration (mg/ml)}}$$
+                $$\textsf {Divide rate by 60 to convert from X/min to X/h}$$
             </details>
         </section>
     </div>
     </body>
 </html>
+
+<!--TODO: desired dose rate suffix-->
+<!--TODO results table suffix (new)-->
