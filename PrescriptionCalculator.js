@@ -26,7 +26,8 @@ function getThirdAmountInDays(thirdAmount, thirdDuration, thirdDurationUnit) {
     }
 }
 
-function calculatePrescription() {
+function calculatePrescription(e) {
+    e.preventDefault();
     var firstAmount = document.getElementById("firstAmount").value;
     var firstDuration = document.getElementById("firstDuration").value;
     var firstDurationUnit = document.getElementById("firstDurationUnit").value;
@@ -59,4 +60,19 @@ function calculatePrescription() {
 
     document.getElementById("totalPrescription").textContent =
         totalPrescription;
+}
+
+function calculateTemporaryPrescription(e) {
+    e.preventDefault();
+    var firstAmount = document.getElementById("firstAmount").value;
+    var firstDuration = document.getElementById("firstDuration").value;
+    var secondAmount = document.getElementById("secondAmount").value;
+    var secondDuration = document.getElementById("secondDuration").value;
+    var thirdAmount = document.getElementById("thirdAmount").value;
+    var thirdDuration = document.getElementById("thirdDuration").value;
+
+    var totalPrescription = (firstAmount * firstDuration) + (secondAmount * secondDuration) + (thirdAmount * thirdDuration);
+
+    document.getElementById("totalPrescription").textContent = totalPrescription;
+
 }

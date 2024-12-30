@@ -14,7 +14,6 @@
             }
         </style>
     </head>
-    <body class="calculator-text">
         <nav>
             <a href="index.html" class="menu-link">
                 <div class="icon home-icon"></div>
@@ -29,113 +28,99 @@
                 Reset
             </a>
         </nav>
+    <body class="body">
+    <div>
+        <section class="input-and-output-section">
         <h1>Prescription Calculator</h1>
-        <table oninput="calculatePrescription()" class="inputs-table">
-            <tr>
-                <td><label for="firstAmount"> Give:</label></td>
-                <td>
-                    <input
+            <form onsubmit="calculateTemporaryPrescription(event)">
+                <div class="div">
+                    <label class="label" for="firstAmount">First give:</label>
+                    <div class="input-wrapper">
+                        <input
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="0"
+                            id="firstAmount"
+                            name="firstAmount"
+                            required
+                            />
+                        <div class="input-suffix" aria-hidden="true">sachets for:</div>
+                        <input
+                        class="secondary-input"
                         type="number"
-                        min="0"
-                        id="firstAmount"
-                        name="firstAmount"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>
-                    sachets/mls per day,
-                    <label for="firstDuration"> for:</label>
-                </td>
-                <td>
-                    <input
-                        type="number"
+                        step="any"
                         min="0"
                         id="firstDuration"
                         name="firstDuration"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>
-                    <select id="firstDurationUnit">
-                        <option value="durationDays">days</option>
-                        <option value="durationWeeks">weeks</option>
-                    </select>
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><label for="secondAmount"> Then give:</label></td>
-                <td>
-                    <input
-                        type="number"
-                        min="0"
-                        id="secondAmount"
-                        name="secondAmount"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>
-                    sachets/mls per day,
-                    <label for="secondDuration"> for:</label>
-                </td>
-                <td>
-                    <input
-                        type="number"
-                        min="0"
-                        id="secondDuration"
-                        name="secondDuration"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>
-                    <select id="secondDurationUnit">
-                        <option value="durationDays">days</option>
-                        <option value="durationWeeks">weeks</option>
-                    </select>
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><label for="thirdAmount"> Then give:</label></td>
-                <td>
-                    <input
-                        type="number"
-                        min="0"
-                        id="thirdAmount"
-                        name="thirdAmount"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>
-                    sachets/mls per day,
-                    <label for="thirdDuration"> for:</label>
-                </td>
-                <td>
-                    <input
-                        type="number"
-                        min="0"
-                        id="thirdDuration"
-                        name="thirdDuration"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>
-                    <select id="thirdDurationUnit">
-                        <option value="durationDays">days</option>
-                        <option value="durationWeeks">weeks</option>
-                    </select>
-                </td>
-                <td></td>
-            </tr>
-        </table>
-        <br />
-        <br />
-        <table class="outputs-table">
-            <tr>
-                <td>Total prescription (sachets/mls)</td>
-                <td id="totalPrescription"></td>
-            </tr>
-        </table>
+                        required
+                        />
+                        <div class="input-suffix" aria-hidden="true">days</div>
+                </div>
+                </div>
+                <div class="div">
+                    <label class="label" for="secondAmount">Then give:</label>
+                    <div class="input-wrapper">
+                        <input
+                                class="input"
+                                type="number"
+                                step="any"
+                                min="0"
+                                id="secondAmount"
+                                name="secondAmount"
+                        />
+                        <div class="input-suffix" aria-hidden="true">sachets for:</div>
+                        <input
+                                class="secondary-input"
+                                type="number"
+                                step="any"
+                                min="0"
+                                id="secondDuration"
+                                name="secondDuration"
+                        />
+                        <div class="input-suffix" aria-hidden="true">days</div>
+                    </div>
+                </div>
+                <div class="div">
+                    <label class="label" for="thirdAmount">Then give:</label>
+                    <div class="input-wrapper">
+                        <input
+                                class="input"
+                                type="number"
+                                step="any"
+                                min="0"
+                                id="thirdAmount"
+                                name="thirdAmount"
+                        />
+                        <div class="input-suffix" aria-hidden="true">sachets for:</div>
+                        <input
+                                class="secondary-input"
+                                type="number"
+                                step="any"
+                                min="0"
+                                id="thirdDuration"
+                                name="thirdDuration"
+                        />
+                        <div class="input-suffix" aria-hidden="true">days</div>
+                    </div>
+                </div>
+                <button type="submit" class="button">
+                    Calculate
+                </button>
+            </form>
+            <section>
+                <h2>Results</h2>
+                <table class="results-table">
+                    <tr>
+                        <td>Total prescription:</td>
+                        <td id="totalPrescription"></td>
+                        <td class="output-suffix" aria-hidden="true">ml/sachets</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </div>
     </body>
 </html>
 <!--todo move to new format, considering how to lay out (drew something in ipad) and how to cope with tubs/powders/sachets/etc-->
+<!--todo focus visible & not moving the next bit around?-->
