@@ -16,7 +16,8 @@ function getDoseUnitInMilligrams(rawDose, doseUnit) {
     }
 }
 
-function calculateMedication() {
+function calculateMedication(e) {
+    e.preventDefault();
     var bodyWeight = document.getElementById("bodyWeight").value;
 
     var rawConcentration = document.getElementById("concentration").value;

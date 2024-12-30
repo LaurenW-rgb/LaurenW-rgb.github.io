@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <title>Medication Calculator</title>
         <script type="text/javascript" src="MedicationCalculator.js"></script>
         <meta
@@ -29,78 +30,96 @@
             Reset
         </a>
     </nav>
-    <body class="calculator-text">
-        <h1>Medication Calculator</h1>
-        <table oninput="calculateMedication()">
-            <tr>
-                <td><label for="bodyWeight">Bodyweight:</label></td>
-                <td>
-                    <input
-                        type="number"
-                        min="1"
-                        id="bodyWeight"
-                        name="bodyWeight"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>kg</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><label for="dose">Dose:</label></td>
-                <td>
-                    <input
-                        type="number"
-                        min="1"
-                        id="dose"
-                        name="dose"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>
-                    <select id="doseUnit">
-                        <option value="milligramsDose">mg</option>
-                        <option value="microgramsDose">μg</option>
-                    </select>
-                </td>
-                <td>
-                    <p>per kg</p>
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><label for="concentration">Concentration:</label></td>
-                <td>
-                    <input
-                        type="number"
-                        min="1"
-                        id="concentration"
-                        name="concentration"
-                        style="width: 50px"
-                    />
-                </td>
-                <td>
-                    <select id="concentrationUnit">
-                        <option value="milligramsConc">mg</option>
-                        <option value="microgramsConc">μg</option>
-                    </select>
-                </td>
-                <td>
-                    <p>per ml</p>
-                </td>
-                <td></td>
-            </tr>
-        </table>
-        <br />
-        <br />
-        <table class="outputs-table">
-            <tr>
-                <td>Volume (ml)</td>
-                <td id="result"></td>
-            </tr>
-        </table>
+    <body class="body">
+    <div>
+        <section class="input-and-output-section">
+            <h1>Medication Calculator</h1>
+            <form onsubmit="calculateMedication(event)">
+                <div class="div">
+                    <label class="label" for="bodyWeight">Bodyweight:</label>
+                    <div class="input-wrapper">
+                        <input
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="0"
+                            id="bodyWeight"
+                            name="bodyWeight"
+                            required
+                            />
+                        <div class="input-suffix" aria-hidden="true">kg</div>
+                    </div>
+                </div>
+                <div class="div">
+                    <label class="label" for="dose">Dose:</label>
+                    <div class="input-wrapper">
+                        <input
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="0"
+                            id="dose"
+                            name="dose"
+                            required
+                            />
+                        <select
+                            class="input-suffix-select"
+                            aria-hidden="true"
+                            id="doseUnit"
+                            name="doseUnit"
+                            >
+                            <option value="milligramsDose">mg/kg</option>
+                            <option value="microgramsDose">ug/kg</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="div">
+                    <label class="label" for="concentration"
+                    >Drug Concentration</label
+                    >
+                    <div class="input-wrapper">
+                        <input
+                                class="input"
+                                type="number"
+                                step="any"
+                                min="1"
+                                id="concentration"
+                                name="concentration"
+                        />
+                        <select
+                                class="input-suffix-select"
+                                aria-hidden="true"
+                                id="concentrationUnit"
+                                name="concentrationUnit"
+                        >
+                            <option value="milligramsConc">mg/ml</option>
+                            <option value="microgramsConc">ug/ml</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="button">
+                    Calculate
+                </button>
+            </form>
+            <section>
+                <h2>Results</h2>
+                <table class="results-table">
+                    <tr>
+                        <td>Volume</td>
+                        <td id="result" ></td>
+                        <td class="output-suffix">ml</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+        <section>
+            <details class="details">
+                <summary>Tell me the maths</summary>
+                $$\textsf{Volume} = {{\textsf{bodyweight} \times \textsf{dose}}\over \textsf{concentration}}$$
+            </details>
+        </section>
+    </div>
     </body>
 </html>
 
-<!--todo move to new format, considering how to do tubs/powders/sachets-->
+<!--consider how to do tubs/powders/sachets-->
