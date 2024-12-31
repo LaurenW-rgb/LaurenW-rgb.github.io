@@ -3,12 +3,21 @@ function setPageUnits(e){
 
     var prescriptionType = document.getElementById("prescriptionType").value;
     if (prescriptionType === "sachets"){
-        document.getElementById("suffixID").textContent = "sachets";
+        document.getElementById("firstSuffixID").textContent = "sachets";
+        document.getElementById("secondSuffixID").textContent = "sachets";
+        document.getElementById("thirdSuffixID").textContent = "sachets";
+        document.getElementById("resultsSuffixID").textContent = "sachets";
     } else if (prescriptionType === "tubs"){
-        document.getElementById("suffixID").textContent = "scoops";
+        document.getElementById("firstSuffixID").textContent = "scoops";
+        document.getElementById("secondSuffixID").textContent = "scoops";
+        document.getElementById("thirdSuffixID").textContent = "scoops";
+        document.getElementById("resultsSuffixID").textContent = "scoops";
     }
     else if (prescriptionType === "select"){
-        document.getElementById("suffixID").textContent = "";
+        document.getElementById("firstSuffixID").textContent = "";
+        document.getElementById("secondSuffixID").textContent = "";
+        document.getElementById("thirdSuffixID").textContent = "";
+        document.getElementById("resultsSuffixID").textContent = "";
     }
 }
 
