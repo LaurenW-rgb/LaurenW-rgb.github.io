@@ -32,7 +32,7 @@
     <div>
         <section class="input-and-output-section">
         <h1>Prescription Calculator</h1>
-            <form onsubmit="calculateTemporaryPrescription(event)">
+            <form onsubmit="calculatePrescription(event)">
                 <div class="div">
                     <label class="label" for="firstAmount">First give:</label>
                     <div class="input-wrapper">
@@ -55,7 +55,15 @@
                         name="firstDuration"
                         required
                         />
-                        <div class="input-suffix" aria-hidden="true">days</div>
+                        <select
+                                class="input-suffix-select"
+                                aria-hidden="true"
+                                id="firstDurationUnit"
+                                name="firstDurationUnit"
+                        >
+                            <option value="durationDays">days</option>
+                            <option value="durationWeeks">weeks</option>
+                        </select>
                 </div>
                 </div>
                 <div class="div">
@@ -78,7 +86,15 @@
                                 id="secondDuration"
                                 name="secondDuration"
                         />
-                        <div class="input-suffix" aria-hidden="true">days</div>
+                        <select
+                                class="input-suffix-select"
+                                aria-hidden="true"
+                                id="secondDurationUnit"
+                                name="secondDurationUnit"
+                        >
+                            <option value="durationDays">days</option>
+                            <option value="durationWeeks">weeks</option>
+                        </select>
                     </div>
                 </div>
                 <div class="div">
@@ -101,7 +117,15 @@
                                 id="thirdDuration"
                                 name="thirdDuration"
                         />
-                        <div class="input-suffix" aria-hidden="true">days</div>
+                        <select
+                                class="input-suffix-select"
+                                aria-hidden="true"
+                                id="thirdDurationUnit"
+                                name="thirdDurationUnit"
+                        >
+                            <option value="durationDays">days</option>
+                            <option value="durationWeeks">weeks</option>
+                        </select>
                     </div>
                 </div>
                 <button type="submit" class="button">
