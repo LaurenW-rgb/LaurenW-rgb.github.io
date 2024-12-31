@@ -173,6 +173,37 @@ details[open] summary {
     flex-direction: column;
 }
 
+
+.standard-select {
+    display: flex;
+    align-items: center;
+    background-color: #f3f2f1;
+    border: 2px rgb(11, 12, 12) solid;
+    box-sizing: content-box;
+    flex-basis: auto;
+    font-size: 16px;
+    font-weight: 400;
+    height: 28px;
+    justify-content: center;
+    line-height: 20px;
+    min-width: 40px;
+    padding: 8px 5px 2px 5px;
+    text-align: center;
+    text-wrap: nowrap;
+    unicode-bidi: isolate;
+    white-space-collapse: collapse;
+    -webkit-font-smoothing: antialiased;
+    flex-direction: column;
+}
+
+.standard-select:focus-visible {
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-left-color: rgb(11, 12, 12);
+    outline: 2px solid;
+    z-index: 2;
+}
+
 .secondary-input{
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;

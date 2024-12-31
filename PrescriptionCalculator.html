@@ -34,6 +34,18 @@
         <h1>Prescription Calculator</h1>
             <form onsubmit="calculatePrescription(event)">
                 <div class="div">
+                    <label class="label" for="prescriptionType">Type:</label>
+                    <select
+                            class="standard-select"
+                            aria-hidden="true"
+                            id="prescriptionType"
+                            name="prescriptionType"
+                    >
+                        <option value="sachets">Sachets</option>
+                        <option value="tubs">Tubs</option>
+                    </select>
+                </div>
+                <div class="div">
                     <label class="label" for="firstAmount">First give:</label>
                     <div class="input-wrapper">
                         <input
@@ -146,7 +158,6 @@
     </div>
     </body>
 </html>
-<!--todo move to new format, considering how to lay out (drew something in ipad) and how to cope with tubs/powders/sachets/etc-->
+<!--todo consider how to lay out (drew something in ipad) and how to cope with tubs/powders/sachets/etc-->
 <!--todo choose sachets or powders at top (?ml?) and for powders display the tub situation-->
-<!--todo select days or weeks-->
 <!--todo focus visible & not moving the next bit around?-->
