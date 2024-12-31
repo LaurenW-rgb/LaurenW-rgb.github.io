@@ -32,19 +32,21 @@
     <div>
         <section class="input-and-output-section">
         <h1>Prescription Calculator</h1>
+            <div class="div">
+                <label class="label" for="prescriptionType">Type:</label>
+                <select
+                        onchange="setPageUnits(event)"
+                        class="standard-select"
+                        aria-hidden="true"
+                        id="prescriptionType"
+                        name="prescriptionType"
+                >
+                    <option value="select">Select...</option>
+                    <option value="sachets">Sachets</option>
+                    <option value="tubs">Tubs</option>
+                </select>
+            </div>
             <form onsubmit="calculatePrescription(event)">
-                <div class="div">
-                    <label class="label" for="prescriptionType" oninput="setPageUnits(event)">Type:</label>
-                    <select
-                            class="standard-select"
-                            aria-hidden="true"
-                            id="prescriptionType"
-                            name="prescriptionType"
-                    >
-                        <option value="sachets">Sachets</option>
-                        <option value="tubs">Tubs</option>
-                    </select>
-                </div>
                 <div class="div">
                     <label class="label" for="firstAmount">First give:</label>
                     <div class="input-wrapper">

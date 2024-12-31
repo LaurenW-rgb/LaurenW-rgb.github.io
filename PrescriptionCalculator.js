@@ -1,12 +1,15 @@
 function setPageUnits(e){
     e.preventDefault();
 
-    // var prescriptionType = document.getElementById("prescriptionType").value;
-    // if (prescriptionType === "sachets"){
-    //     document.getElementById("suffixID").textContent = "sachets";
-    // } else if (prescriptionType === "tubs"){
-    //     document.getElementById("suffixID").textContent = "scoops";
-    // }
+    var prescriptionType = document.getElementById("prescriptionType").value;
+    if (prescriptionType === "sachets"){
+        document.getElementById("suffixID").textContent = "sachets";
+    } else if (prescriptionType === "tubs"){
+        document.getElementById("suffixID").textContent = "scoops";
+    }
+    else if (prescriptionType === "select"){
+        document.getElementById("suffixID").textContent = "";
+    }
 }
 
 
@@ -72,12 +75,4 @@ function calculatePrescription(e) {
 
     document.getElementById("totalPrescription").textContent =
         totalPrescription;
-
-    // prescription type experiment:
-    var prescriptionType = document.getElementById("prescriptionType").value;
-    if (prescriptionType === "sachets"){
-        document.getElementById("suffixID").textContent = "sachets";
-    } else if (prescriptionType === "tubs"){
-        document.getElementById("suffixID").textContent = "scoops";
-    }
 }

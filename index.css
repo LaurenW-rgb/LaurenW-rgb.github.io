@@ -177,7 +177,7 @@ details[open] summary {
 .standard-select {
     display: flex;
     align-items: center;
-    background-color: #f3f2f1;
+    background-color: none;
     border: 2px rgb(11, 12, 12) solid;
     box-sizing: content-box;
     flex-basis: auto;
