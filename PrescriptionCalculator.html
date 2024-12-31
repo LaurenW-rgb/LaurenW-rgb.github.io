@@ -34,7 +34,7 @@
         <h1>Prescription Calculator</h1>
             <form onsubmit="calculatePrescription(event)">
                 <div class="div">
-                    <label class="label" for="prescriptionType">Type:</label>
+                    <label class="label" for="prescriptionType" oninput="setPageUnits(event)">Type:</label>
                     <select
                             class="standard-select"
                             aria-hidden="true"
@@ -57,7 +57,7 @@
                             name="firstAmount"
                             required
                             />
-                        <div class="input-suffix" aria-hidden="true">sachets for:</div>
+                        <div class="input-suffix" aria-hidden="true" id="suffixID"></div>
                         <input
                         class="secondary-input"
                         type="number"

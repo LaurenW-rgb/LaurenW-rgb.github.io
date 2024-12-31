@@ -1,3 +1,15 @@
+function setPageUnits(e){
+    e.preventDefault();
+
+    // var prescriptionType = document.getElementById("prescriptionType").value;
+    // if (prescriptionType === "sachets"){
+    //     document.getElementById("suffixID").textContent = "sachets";
+    // } else if (prescriptionType === "tubs"){
+    //     document.getElementById("suffixID").textContent = "scoops";
+    // }
+}
+
+
 function getFirstAmountInDays(firstAmount, firstDuration, firstDurationUnit) {
     if (firstDurationUnit === "durationDays") {
         return firstAmount * firstDuration;
@@ -60,4 +72,12 @@ function calculatePrescription(e) {
 
     document.getElementById("totalPrescription").textContent =
         totalPrescription;
+
+    // prescription type experiment:
+    var prescriptionType = document.getElementById("prescriptionType").value;
+    if (prescriptionType === "sachets"){
+        document.getElementById("suffixID").textContent = "sachets";
+    } else if (prescriptionType === "tubs"){
+        document.getElementById("suffixID").textContent = "scoops";
+    }
 }
