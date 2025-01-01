@@ -23,8 +23,8 @@ function setPageUnits(e){
         tubGrams.hidden = true;
         microgramsConc.hidden = false;
     } else if (formulation === "tubs") {
-        document.getElementById("milligramsConc").textContent = "mg/scoop"
-        document.getElementById("microgramsConc").textContent = "ug/scoop"
+        document.getElementById("milligramsConc").textContent = "mg/g"
+        document.getElementById("microgramsConc").textContent = "ug/g"
         document.getElementById("resultsSuffixID").textContent = "scoops";
         scoopGrams.hidden = false;
         tubGrams.hidden = false;
@@ -73,7 +73,15 @@ function calculateMedication(e) {
     var doseUnit = document.getElementById("doseUnit").value;
     var doseMilligrams = getDoseUnitInMilligrams(rawDose, doseUnit);
 
-    var result = (bodyWeight * doseMilligrams) / concentrationMilligrams;
+    var gramsPerScoop = document.getElementById("gramsPerScoop").value;
+
+    var formulation = document.getElementById("formulation").value;
+    if (formulation === "solution" || formulation === "sachets") {
+        var result = (bodyWeight * doseMilligrams) / (concentrationMilligrams);
+    } else if (formulation === "tubs") {
+        result = (bodyWeight * doseMilligrams) / (concentrationMilligrams * gramsPerScoop);
+    }
+
 
     if (isNaN(result)) {
         document.getElementById("result").textContent = "error";
