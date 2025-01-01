@@ -20,6 +20,7 @@ function setPageUnits(e){
         milligramsConcTub.style.display = "none";
         microgramsConcTub.style.display = "none";
         blank.style.display = "none";
+        document.getElementById("resultsSuffixID").textContent = "ml";
     } else if (formulation === "sachets") {
         milligramsConcSolution.style.display = "none";
         microgramsConcSolution.style.display = "none";
@@ -28,6 +29,7 @@ function setPageUnits(e){
         milligramsConcTub.style.display = "none";
         microgramsConcTub.style.display = "none";
         blank.style.display = "none";
+        document.getElementById("resultsSuffixID").textContent = "sachets";
     } else if (formulation === "tubs") {
         milligramsConcSolution.style.display = "none";
         microgramsConcSolution.style.display = "none";
@@ -36,6 +38,7 @@ function setPageUnits(e){
         milligramsConcTub.style.display = "block";
         microgramsConcTub.style.display = "block";
         blank.style.display = "none";
+        document.getElementById("resultsSuffixID").textContent = "scoops";
     } else if (formulation === "select") {
         milligramsConcSolution.style.display = "none";
         microgramsConcSolution.style.display = "none";
@@ -44,6 +47,7 @@ function setPageUnits(e){
         milligramsConcTub.style.display = "none";
         microgramsConcTub.style.display = "none";
         blank.style.display = "block";
+        document.getElementById("resultsSuffixID").textContent = "";
     }
 }
 
