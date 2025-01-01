@@ -34,6 +34,21 @@
     <div>
         <section class="input-and-output-section">
             <h1>Medication Calculator</h1>
+            <div class="div">
+                <label class="label" for="formulation">Formulation:</label>
+                <select
+                    onchange="setPageUnits(event)"
+                    class="standard-select"
+                    aria-hidden="true"
+                    id="formulation"
+                    name="formulation"
+                    >
+                    <option value="select">Select...</option>
+                    <option value="solution">Solution</option>
+                    <option value="sachets">Sachets</option>
+                    <option value="tubs">Tubs</option>
+                </select>
+            </div>
             <form onsubmit="calculateMedication(event)">
                 <div class="div">
                     <label class="label" for="bodyWeight">Bodyweight:</label>
@@ -122,4 +137,4 @@
     </body>
 </html>
 
-<!--consider how to do tubs/powders/sachets-->
+<!--todo consider how to do tubs/powders/sachets - bit like how have done prescriptions?-->
