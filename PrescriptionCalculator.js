@@ -1,23 +1,28 @@
 function setPageUnits(e){
     e.preventDefault();
 
+    var tubGrams = document.getElementById("tubGrams");
+
     var prescriptionType = document.getElementById("prescriptionType").value;
     if (prescriptionType === "sachets"){
         document.getElementById("firstSuffixID").textContent = "sachets";
         document.getElementById("secondSuffixID").textContent = "sachets";
         document.getElementById("thirdSuffixID").textContent = "sachets";
         document.getElementById("resultsSuffixID").textContent = "sachets";
+        tubGrams.style.display = "none";
     } else if (prescriptionType === "tubs"){
         document.getElementById("firstSuffixID").textContent = "scoops";
         document.getElementById("secondSuffixID").textContent = "scoops";
         document.getElementById("thirdSuffixID").textContent = "scoops";
         document.getElementById("resultsSuffixID").textContent = "scoops";
+        tubGrams.style.display = "block";
     }
     else if (prescriptionType === "select"){
         document.getElementById("firstSuffixID").textContent = "";
         document.getElementById("secondSuffixID").textContent = "";
         document.getElementById("thirdSuffixID").textContent = "";
         document.getElementById("resultsSuffixID").textContent = "";
+        tubGrams.style.display = "none";
     }
 }
 

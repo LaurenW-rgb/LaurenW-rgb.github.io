@@ -46,6 +46,30 @@
                     <option value="tubs">Tubs</option>
                 </select>
             </div>
+            <section class="input-and-output-section" id="tubGrams" hidden>
+                <label class="label" for="gramsPerTub">Grams per tub:</label>
+                <div class="input-wrapper">
+                    <input
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="0"
+                            id="gramsPerTub"
+                            name="gramsPerTub"
+                    />
+                </div>
+                <label class="label" for="gramsPerTub">Grams per scoop:</label>
+                <div class="input-wrapper">
+                    <input
+                            class="input"
+                            type="number"
+                            step="any"
+                            min="0"
+                            id="gramsPerScoop"
+                            name="gramsPerScoop"
+                    />
+                </div>
+            </section>
             <form onsubmit="calculatePrescription(event)">
                 <div class="div">
                     <label class="label" for="firstAmount">First give:</label>
@@ -165,4 +189,6 @@
 </html>
 <!--todo consider how to lay out (drew something in ipad) and how to cope with tubs/powders/sachets/etc-->
 <!--todo choose sachets or powders at top (?ml?) and for powders display the tub situation-->
+<!--todo select tubs -> show grams per scoop and grams per tub-->
+<!--todo results either: select sachets -> show sachet td // select tubs -> show grams and tubs td-->
 <!--todo focus visible & not moving the next bit around?-->
