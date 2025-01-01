@@ -47,6 +47,7 @@
                 </select>
             </div>
             <section class="input-and-output-section" id="tubGrams" hidden>
+                <div class="div">
                 <label class="label" for="gramsPerTub">Grams per tub:</label>
                 <div class="input-wrapper">
                     <input
@@ -57,7 +58,10 @@
                             id="gramsPerTub"
                             name="gramsPerTub"
                     />
+                    <div class="input-suffix">grams</div>
                 </div>
+                </div>
+                <div class="div">
                 <label class="label" for="gramsPerTub">Grams per scoop:</label>
                 <div class="input-wrapper">
                     <input
@@ -68,6 +72,8 @@
                             id="gramsPerScoop"
                             name="gramsPerScoop"
                     />
+                    <div class="input-suffix">grams</div>
+                </div>
                 </div>
             </section>
             <form onsubmit="calculatePrescription(event)">
@@ -192,3 +198,4 @@
 <!--todo select tubs -> show grams per scoop and grams per tub-->
 <!--todo results either: select sachets -> show sachet td // select tubs -> show grams and tubs td-->
 <!--todo focus visible & not moving the next bit around?-->
+<!--todo when click grams per tub label, appropriate box focusses, but when click grams per scoop label, grams per tub box focusses-->
