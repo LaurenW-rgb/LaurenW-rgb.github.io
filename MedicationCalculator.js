@@ -4,6 +4,7 @@ function setPageUnits(e){
     e.preventDefault();
 
     var formulation = document.getElementById("formulation").value;
+    var microgramsConc = document.getElementById("microgramsConc");
 
     if (formulation === "solution") {
         document.getElementById("milligramsConc").textContent = "mg/ml"
@@ -18,14 +19,9 @@ function setPageUnits(e){
         document.getElementById("microgramsConc").textContent = "ug/scoop"
         document.getElementById("resultsSuffixID").textContent = "scoops";
     } else if (formulation === "select") {
-        // milligramsConcSolution.style.display = "none";
-        // microgramsConcSolution.style.display = "none";
-        // milligramsConcSachet.style.display = "none";
-        // microgramsConcSachet.style.display = "none";
-        // milligramsConcTub.style.display = "none";
-        // microgramsConcTub.style.display = "none";
-        // blank.style.display = "block";
+        document.getElementById("milligramsConc").textContent = ""
         document.getElementById("resultsSuffixID").textContent = "";
+        microgramsConc.hidden = true;
     }
 }
 
