@@ -22,13 +22,15 @@ function setPageUnits(e){
         document.getElementById("resultsSuffixID").textContent = "scoops";
         microgramsConc.hidden = false;
     } else if (formulation === "select") {
+        document.getElementById("bodyWeight").value = "0";
+        document.getElementById("dose").value = "0";
+        document.getElementById("concentration").value = "0";
+        document.getElementById("result").textContent = "0";
         document.getElementById("milligramsConc").textContent = ""
         document.getElementById("resultsSuffixID").textContent = "";
         microgramsConc.hidden = true;
     }
 }
-
-// todo clear inputs if reselect "select"
 
 function getConcentrationInMilligrams(rawConcentration, concentrationUnit) {
     if (concentrationUnit === "milligramsConc") {
