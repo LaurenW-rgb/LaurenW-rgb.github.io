@@ -52,12 +52,14 @@ function setPageUnits(e){
 }
 
 function getConcentrationInMilligrams(rawConcentration, concentrationUnit) {
-    if (concentrationUnit === "milligramsConc") {
+    if (concentrationUnit === "milligramsConcSolution" || concentrationUnit === "milligramsConcSachet" || concentrationUnit === "milligramsConcTub") {
         return rawConcentration * 1;
-    } else if (concentrationUnit === "microgramsConc") {
+    } else if (concentrationUnit === "microgramsConcSolution" || concentrationUnit === "microgramsConcSachet" || concentrationUnit === "microgramsConcTub") {
         return rawConcentration / 1000;
     }
 }
+
+// todo update concentration units as now depends on whether solution/sachet/tub
 
 function getDoseUnitInMilligrams(rawDose, doseUnit) {
     if (doseUnit === "milligramsDose") {
@@ -85,9 +87,9 @@ function calculateMedication(e) {
     var result = (bodyWeight * doseMilligrams) / concentrationMilligrams;
 
     if (isNaN(result)) {
-        document.getElementById("result").textContent = "0.0";
+        document.getElementById("result").textContent = "error";
     } else if (!isFinite(result)) {
-        document.getElementById("result").textContent = "0.0";
+        document.getElementById("result").textContent = "error";
     } else {
         document.getElementById("result").textContent = result.toFixed(1);
     }
