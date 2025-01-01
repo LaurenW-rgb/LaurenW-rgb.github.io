@@ -5,21 +5,29 @@ function setPageUnits(e){
 
     var formulation = document.getElementById("formulation").value;
     var microgramsConc = document.getElementById("microgramsConc");
+    var scoopGrams = document.getElementById("scoopGrams");
+    var tubGrams = document.getElementById("tubGrams");
 
     if (formulation === "solution") {
         document.getElementById("milligramsConc").textContent = "mg/ml"
         document.getElementById("microgramsConc").textContent = "ug/ml"
         document.getElementById("resultsSuffixID").textContent = "ml";
+        scoopGrams.hidden = true;
+        tubGrams.hidden = true;
         microgramsConc.hidden = false;
     } else if (formulation === "sachets") {
         document.getElementById("milligramsConc").textContent = "mg/sachet"
         document.getElementById("microgramsConc").textContent = "ug/sachet"
         document.getElementById("resultsSuffixID").textContent = "sachets";
+        scoopGrams.hidden = true;
+        tubGrams.hidden = true;
         microgramsConc.hidden = false;
     } else if (formulation === "tubs") {
         document.getElementById("milligramsConc").textContent = "mg/scoop"
         document.getElementById("microgramsConc").textContent = "ug/scoop"
         document.getElementById("resultsSuffixID").textContent = "scoops";
+        scoopGrams.hidden = false;
+        tubGrams.hidden = false;
         microgramsConc.hidden = false;
     } else if (formulation === "select") {
         document.getElementById("bodyWeight").value = "0";
@@ -28,6 +36,8 @@ function setPageUnits(e){
         document.getElementById("result").textContent = "0";
         document.getElementById("milligramsConc").textContent = ""
         document.getElementById("resultsSuffixID").textContent = "";
+        scoopGrams.hidden = true;
+        tubGrams.hidden = true;
         microgramsConc.hidden = true;
     }
 }

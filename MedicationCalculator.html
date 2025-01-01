@@ -109,6 +109,38 @@
                         </select>
                     </div>
                 </div>
+                <div class="div" id="scoopGrams" hidden>
+                    <label class="label" for="gramsPerScoop"
+                    >Grams per scoop</label
+                    >
+                    <div class="input-wrapper">
+                        <input
+                                class="input"
+                                type="number"
+                                step="any"
+                                min="0"
+                                id="gramsPerScoop"
+                                name="gramsPerScoop"
+                        />
+                        <div class="input-suffix">grams</div>
+                    </div>
+                </div>
+                <div class="div" id="tubGrams" hidden>
+                    <label class="label" for="gramsPerTub"
+                    >Grams per scoop</label
+                    >
+                    <div class="input-wrapper">
+                        <input
+                                class="input"
+                                type="number"
+                                step="any"
+                                min="0"
+                                id="gramsPerTub"
+                                name="gramsPerTub"
+                        />
+                        <div class="input-suffix">grams</div>
+                    </div>
+                </div>
                 <button type="submit" class="button">
                     Calculate
                 </button>
@@ -134,4 +166,4 @@
     </body>
 </html>
 
-<!--todo consider how to do tubs/powders/sachets - bit like how have done prescriptions?-->
+<!--todo add grams per scoop and grams per tub for tubs-->
