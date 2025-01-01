@@ -10,20 +10,25 @@ function setPageUnits(e){
         document.getElementById("milligramsConc").textContent = "mg/ml"
         document.getElementById("microgramsConc").textContent = "ug/ml"
         document.getElementById("resultsSuffixID").textContent = "ml";
+        microgramsConc.hidden = false;
     } else if (formulation === "sachets") {
         document.getElementById("milligramsConc").textContent = "mg/sachet"
         document.getElementById("microgramsConc").textContent = "ug/sachet"
         document.getElementById("resultsSuffixID").textContent = "sachets";
+        microgramsConc.hidden = false;
     } else if (formulation === "tubs") {
         document.getElementById("milligramsConc").textContent = "mg/scoop"
         document.getElementById("microgramsConc").textContent = "ug/scoop"
         document.getElementById("resultsSuffixID").textContent = "scoops";
+        microgramsConc.hidden = false;
     } else if (formulation === "select") {
         document.getElementById("milligramsConc").textContent = ""
         document.getElementById("resultsSuffixID").textContent = "";
         microgramsConc.hidden = true;
     }
 }
+
+// todo clear inputs if reselect "select"
 
 function getConcentrationInMilligrams(rawConcentration, concentrationUnit) {
     if (concentrationUnit === "milligramsConc") {
@@ -32,8 +37,6 @@ function getConcentrationInMilligrams(rawConcentration, concentrationUnit) {
         return rawConcentration / 1000;
     }
 }
-
-// todo update concentration units as now depends on whether solution/sachet/tub
 
 function getDoseUnitInMilligrams(rawDose, doseUnit) {
     if (doseUnit === "milligramsDose") {
