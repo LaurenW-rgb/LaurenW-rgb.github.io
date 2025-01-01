@@ -39,7 +39,6 @@
                 <select
                     onchange="setPageUnits(event)"
                     class="standard-select"
-                    aria-hidden="true"
                     id="formulation"
                     name="formulation"
                     >
@@ -107,8 +106,13 @@
                                 id="concentrationUnit"
                                 name="concentrationUnit"
                         >
-                            <option value="milligramsConc">mg/ml</option>
-                            <option value="microgramsConc">ug/ml</option>
+                            <option id="blank"></option>
+                            <option id="milligramsConcSolution" value="milligramsConcSolution" hidden>mg/ml</option>
+                            <option id="microgramsConcSolution" value="microgramsConcSolution" hidden>ug/ml</option>
+                            <option id="milligramsConcSachet" value="milligramsConcSachet" hidden>mg/sachet</option>
+                            <option id="microgramsConcSachet" value="microgramsConcSachet" hidden>ug/sachet</option>
+                            <option id="milligramsConcTub" value="milligramsConcTub" hidden>mg/gram</option>
+                            <option id="microgramsConcTub" value="microgramsConcTub" hidden>ug/gram</option>
                         </select>
                     </div>
                 </div>
