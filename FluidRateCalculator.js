@@ -2,7 +2,7 @@ function getFluidRateInMls(fluidRate, fluidRateID){
     if (fluidRateID === "ml/kg/day"){
         return fluidRate *1;
     } else if (fluidRateID === "maintenance"){
-        return fluidRate * 60;
+        return fluidRate * 60 ;
     }
 }
 
@@ -10,10 +10,8 @@ function calculateFluidRate(e) {
     e.preventDefault();
     var fluidRate = document.getElementById("fluidRate").value;
     var fluidRateID = document.getElementById("fluidRateID").value;
-    var fluidRateInMls = getFluidRateInMls(fluidRate, fluidRateID);
-
     var bodyWeight = document.getElementById("bodyWeight").value;
-    // var fluidRate = document.getElementById("fluidRate").value;
+    var fluidRateInMls = getFluidRateInMls(fluidRate, fluidRateID);
     var dropsPerMl = document.getElementById("dropsPerMl").value;
     var litresLeft = document.getElementById("litresLeft").value;
 
