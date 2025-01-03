@@ -58,7 +58,15 @@
                             name="fluidRate"
                             required
                     />
-                    <div class="input-suffix" aria-hidden="true">ml/kg/day</div>
+                    <select
+                            class="input-suffix-select"
+                            aria-hidden="true"
+                            id="fluidRateUnit"
+                            name="fluidRateUnit"
+                    >
+                        <option value="ml/kg/day">ml per kg per day</option>
+                        <option value="maintenance">times maintenance</option>
+                    </select>
                 </div>
             </div>
             <div class="div">
