@@ -67,6 +67,8 @@ function calculatePrescription(e) {
     var thirdAmount = document.getElementById("thirdAmount").value;
     var thirdDuration = document.getElementById("thirdDuration").value;
     var thirdDurationUnit = document.getElementById("thirdDurationUnit").value;
+    var gramsPerTub = document.getElementById("gramsPerTub").value;
+    var gramsPerScoop = document.getElementById("gramsPerScoop").value;
 
     var firstAmountInDays = getFirstAmountInDays(
         firstAmount,
@@ -87,6 +89,9 @@ function calculatePrescription(e) {
     var totalPrescription =
         firstAmountInDays + secondAmountInDays + thirdAmountInDays;
 
+    var tubNumber = (totalPrescription * gramsPerScoop) / gramsPerTub;
+
     document.getElementById("totalPrescription").textContent =
         totalPrescription;
+    document.getElementById("tubNumber").textContent = tubNumber;
 }
