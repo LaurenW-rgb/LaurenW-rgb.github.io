@@ -9,7 +9,7 @@ html {
 
 .body {
     text-size-adjust: 100%;
-    margin: 0;
+    margin: 10px 20px 50px 20px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -251,7 +251,7 @@ details[open] summary {
 .standard-select {
     display: flex;
     align-items: center;
-    background-color: none;
+    background-color: transparent;
     border: 2px rgb(11, 12, 12) solid;
     box-sizing: content-box;
     flex-basis: auto;
@@ -289,7 +289,7 @@ details[open] summary {
     margin-top: 0;
     padding: 5px;
     border: 2px;
-    border-left: 0px;
+    border-left: 0;
     border-style: solid;
     border-color: #0b0c0c;
     border-radius: 0;
