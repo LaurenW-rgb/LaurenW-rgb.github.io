@@ -7,6 +7,11 @@ html {
     margin-bottom: 20px;
 }
 
+.whole-page {
+    width: 100%;
+    max-width: 400px;
+}
+
 .body {
     text-size-adjust: 100%;
     margin: 10px 20px 50px 20px;
