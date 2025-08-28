@@ -35,15 +35,16 @@ html {
 }
 
 .details {
+    margin-top: 20px;
     border: 1px solid #aaa;
     border-radius: 4px;
     padding: 0.5em;
-    width: 200px;
+    width: fit-content;
     box-sizing: border-box;
 }
 
 details[open] {
-    width: 100%;
+    width: fit-content;
 }
 
 summary {
