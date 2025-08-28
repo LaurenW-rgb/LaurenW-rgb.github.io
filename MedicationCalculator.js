@@ -26,12 +26,12 @@ function setPageUnits(e){
         scoopGrams.hidden = false;
         microgramsConc.hidden = false;
     } else if (formulation === "select") {
-        document.getElementById("bodyWeight").value = "0";
-        document.getElementById("dose").value = "0";
-        document.getElementById("concentration").value = "0";
-        document.getElementById("result").textContent = "0";
-        document.getElementById("milligramsConc").textContent = ""
-        document.getElementById("resultsSuffixID").textContent = "";
+        document.getElementById("bodyWeight").value = "";
+        document.getElementById("dose").value = "";
+        document.getElementById("concentration").value = "";
+        document.getElementById("result").textContent = "";
+        document.getElementById("milligramsConc").textContent = "-"
+        document.getElementById("resultsSuffixID").textContent = "-";
         scoopGrams.hidden = true;
         microgramsConc.hidden = true;
     }
