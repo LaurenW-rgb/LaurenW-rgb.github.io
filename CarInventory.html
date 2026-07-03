@@ -43,17 +43,34 @@
                 <option value="butador">Butador</option>
             </select>
             <div class="div">
-                <label class="label" for="direction">Added or taken</label>
+                <label class="label" for="direction">Added or used</label>
                 <select
                     class="standard-select"
                     id="direction"
                     name="direction"
                     >
                     <option value="added">Added</option>
-                    <option value="taken">Taken</option>
+                    <option value="used">Used</option>
                 </select>
             </div>
+            <div class="div">
+                <label class="label" for="amount">Amount:</label>
+                <div class="input-wrapper">
+                    <input
+                    class="input"
+                    type="number"
+                    step="any"
+                    min="0"
+                    id="amount"
+                    name="amount"
+                    />
+                    <div class="input-suffix" aria-hidden="true">ml</div>
+                </div>
+            </div>
         </div>
+            <button type="submit" class="button">
+                Submit
+            </button>
         </form>
     </section>
 </div>
