@@ -30,6 +30,7 @@
 <div class="whole-page">
     <section class="input-and-output-section">
         <h1>Car Inventory</h1>
+        <form onsubmit="calculateInventory(event)">
         <div class="div">
             <label class="label" for="drug">Drug:</label>
             <select
@@ -41,7 +42,19 @@
                 <option value="medesedan">Medesedan</option>
                 <option value="butador">Butador</option>
             </select>
+            <div class="div">
+                <label class="label" for="direction">Added or taken</label>
+                <select
+                    class="standard-select"
+                    id="direction"
+                    name="direction"
+                    >
+                    <option value="added">Added</option>
+                    <option value="taken">Taken</option>
+                </select>
+            </div>
         </div>
+        </form>
     </section>
 </div>
 </body>
