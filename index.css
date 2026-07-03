@@ -403,6 +403,10 @@ details[open] summary {
     background-image: url(/icons/tub.svg);
 }
 
+.car-icon {
+    background-image: url(/icons/car.svg);
+}
+
 .reset-icon {
     background-image: url(/icons/refresh.svg);
 }
