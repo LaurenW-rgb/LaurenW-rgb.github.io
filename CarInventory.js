@@ -25,7 +25,9 @@ function calculateInventory(e) {
     console.log(direction)
     console.log(amount)
 
-    flunixinAmount += amount;
+    if (drug === "flunixin") {
+        flunixinAmount += amount;
+    }
 
     console.log(flunixinAmount);
 
