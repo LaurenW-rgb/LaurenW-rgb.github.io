@@ -2,7 +2,7 @@
 
 // class LocalDatabase {
 //     getStock(drug) {
-//         const stock = Number.parseInt(localStorage.getItem(drug));
+//         const stock = Number.parseFloat(localStorage.getItem(drug));
 //         return stock || 0;
 //     }
 //
@@ -10,7 +10,7 @@
 //         localStorage.setItem(drug, amount)
 //     }
 // }
-
+//
 // const db = new LocalDatabase();
 
 var flunixinAmount = 0;
@@ -28,35 +28,27 @@ function calculateInventory(e) {
     console.log(direction)
     console.log(amount)
 
-    if (drug === "flunixin" && direction === "added") {
+    if (direction === "used") {
+        amount *= -1;
+    }
+
+    if (drug === "flunixin") {
         flunixinAmount += amount;
         console.log(flunixinAmount);
-       document.getElementById("newStock").textContent = "There is " + flunixinAmount + "ml flunixin in the car"
-    } else if (drug === "flunixin" && direction === "used") {
-        flunixinAmount -= amount;
-        console.log(flunixinAmount);
         document.getElementById("newStock").textContent = "There is " + flunixinAmount + "ml flunixin in the car"
+    }
+    ;
 
-    };
-
-    if (drug === "medesedan" && direction === "added") {
+    if (drug === "medesedan") {
         medesedanAmount += amount;
         console.log(medesedanAmount);
         document.getElementById("newStock").textContent = "There is " + medesedanAmount + "ml medesedan in the car"
-    } else if (drug === "medesedan" && direction === "used") {
-        medesedanAmount -= amount;
-        console.log(medesedanAmount);
-        document.getElementById("newStock").textContent = "There is " + medesedanAmount + "ml medesedan in the car"
-    };
+    }
+    ;
 
-    if (drug === "butador" && direction === "added") {
+    if (drug === "butador") {
         butadorAmount += amount;
         console.log(butadorAmount);
         document.getElementById("newStock").textContent = "There is " + butadorAmount + "ml butador in the car"
-    } else if (drug === "butador" && direction === "used") {
-        butadorAmount -= amount;
-        console.log(butadorAmount);
-        document.getElementById("newStock").textContent = "There is " + butadorAmount + "ml butador in the car"
     };
-
 }
