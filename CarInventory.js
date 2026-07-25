@@ -19,9 +19,6 @@ class LocalDatabase {
 
 const db = new LocalDatabase();
 
-var medesedanAmount = 0;
-var butadorAmount =0;
-
 function calculateInventory(e) {
     e.preventDefault();
     var drug = document.getElementById("drug").value;
@@ -36,20 +33,7 @@ function calculateInventory(e) {
     if (direction === "used") {
         delta *= -1;
     }
-    
+
         db.changeStock(drug, delta)
         document.getElementById("newStock").textContent = "There is " + db.getStock(drug) + "ml " + drug + " in the car"
-
-    if (drug === "medesedan") {
-        medesedanAmount += delta;
-        console.log(medesedanAmount);
-        document.getElementById("newStock").textContent = "There is " + medesedanAmount + "ml medesedan in the car"
-    }
-    ;
-
-    if (drug === "butador") {
-        butadorAmount += delta;
-        console.log(butadorAmount);
-        document.getElementById("newStock").textContent = "There is " + butadorAmount + "ml butador in the car"
-    };
 }
