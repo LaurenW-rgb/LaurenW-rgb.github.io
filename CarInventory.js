@@ -22,6 +22,7 @@ function calculateInventory(e) {
     var drug = document.getElementById("drug").value;
     var direction = document.getElementById("direction").value;
     var amount = Number.parseFloat(document.getElementById("amount").value);
+    var newStock = document.getElementById("newStock").textContent;
 
     console.log(drug)
     console.log(direction)
@@ -30,6 +31,7 @@ function calculateInventory(e) {
     if (drug === "flunixin" && direction === "added") {
         flunixinAmount += amount;
         console.log(flunixinAmount);
+       document.getElementById("newStock").textContent = "There is " + flunixinAmount + "ml flunixin in the car"
     } else if (drug === "flunixin" && direction === "used") {
         flunixinAmount -= amount;
         console.log(flunixinAmount);
