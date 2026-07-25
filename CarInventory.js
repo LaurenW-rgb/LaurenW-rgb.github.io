@@ -35,22 +35,28 @@ function calculateInventory(e) {
     } else if (drug === "flunixin" && direction === "used") {
         flunixinAmount -= amount;
         console.log(flunixinAmount);
+        document.getElementById("newStock").textContent = "There is " + flunixinAmount + "ml flunixin in the car"
+
     };
 
     if (drug === "medesedan" && direction === "added") {
         medesedanAmount += amount;
         console.log(medesedanAmount);
+        document.getElementById("newStock").textContent = "There is " + medesedanAmount + "ml medesedan in the car"
     } else if (drug === "medesedan" && direction === "used") {
         medesedanAmount -= amount;
         console.log(medesedanAmount);
+        document.getElementById("newStock").textContent = "There is " + medesedanAmount + "ml medesedan in the car"
     };
 
     if (drug === "butador" && direction === "added") {
         butadorAmount += amount;
         console.log(butadorAmount);
+        document.getElementById("newStock").textContent = "There is " + butadorAmount + "ml butador in the car"
     } else if (drug === "butador" && direction === "used") {
         butadorAmount -= amount;
         console.log(butadorAmount);
+        document.getElementById("newStock").textContent = "There is " + butadorAmount + "ml butador in the car"
     };
 
 }
