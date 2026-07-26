@@ -33,7 +33,7 @@ drugNames.forEach(drug => {
 function writeResults() {
     var resultsTable = document.getElementById("results");
 
-    resultsTable.innerHTML = "";
+    resultsTable.replaceChildren();
 
     drugNames.forEach(drug => {
         const row = document.createElement("tr");
