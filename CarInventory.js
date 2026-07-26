@@ -31,6 +31,7 @@ drugNames.forEach(drug => {
 
 function calculateInventory(e) {
     e.preventDefault();
+    var drug = drugSelect.value;
     var direction = document.getElementById("direction").value;
     var delta = Number.parseFloat(document.getElementById("amount").value);
 
