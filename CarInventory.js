@@ -30,19 +30,26 @@ drugNames.forEach(drug => {
     drugSelect.appendChild(option);
 });
 
-var resultsTable = document.getElementById("results");
-drugNames.forEach(drug => {
-    const row = document.createElement("tr");
-    resultsTable.appendChild(row);
+function writeResults() {
+    var resultsTable = document.getElementById("results");
 
-    var drugCell = document.createElement("td");
-    drugCell.textContent = drug;
-    row.appendChild(drugCell);
+    resultsTable.innerHTML = "";
 
-    var drugAmount = document.createElement("td");
-    drugAmount.textContent = db.getStock(drug);
-    row.appendChild(drugAmount);
-})
+    drugNames.forEach(drug => {
+        const row = document.createElement("tr");
+        resultsTable.appendChild(row);
+
+        var drugCell = document.createElement("td");
+        drugCell.textContent = drug;
+        row.appendChild(drugCell);
+
+        var drugAmount = document.createElement("td");
+        drugAmount.textContent = db.getStock(drug);
+        row.appendChild(drugAmount);
+    })
+}
+
+writeResults();
 
 function calculateInventory(e) {
     e.preventDefault();
@@ -58,6 +65,7 @@ function calculateInventory(e) {
         delta *= -1;
     }
 
-        db.changeStock(drug, delta)
-        document.getElementById("newStock").textContent = "There is " + db.getStock(drug) + "ml " + drug + " in the car"
+    db.changeStock(drug, delta)
+    writeResults();
+    document.getElementById("newStock").textContent = "There is " + db.getStock(drug) + "ml " + drug + " in the car"
 }
