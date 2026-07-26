@@ -19,9 +19,18 @@ class LocalDatabase {
 
 const db = new LocalDatabase();
 
+const drugNames = ["Butorphanol", "Detomidine", "Flunixin"];
+var drugSelect = document.getElementById("drug");
+drugNames.forEach(drug => {
+    const option = document.createElement("option");
+    option.value = drug;
+    option.textContent = drug;
+
+    drugSelect.appendChild(option);
+});
+
 function calculateInventory(e) {
     e.preventDefault();
-    var drug = document.getElementById("drug").value;
     var direction = document.getElementById("direction").value;
     var delta = Number.parseFloat(document.getElementById("amount").value);
 
