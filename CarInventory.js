@@ -24,7 +24,6 @@ function calculateInventory(e) {
     var drug = document.getElementById("drug").value;
     var direction = document.getElementById("direction").value;
     var delta = Number.parseFloat(document.getElementById("amount").value);
-    var newStock = document.getElementById("newStock").textContent;
 
     console.log(drug)
     console.log(direction)
