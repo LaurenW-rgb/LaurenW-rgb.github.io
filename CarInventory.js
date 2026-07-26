@@ -20,6 +20,7 @@ class LocalDatabase {
 const db = new LocalDatabase();
 
 const drugNames = ["Butorphanol", "Detomidine", "Flunixin"];
+
 var drugSelect = document.getElementById("drug");
 drugNames.forEach(drug => {
     const option = document.createElement("option");
@@ -28,6 +29,20 @@ drugNames.forEach(drug => {
 
     drugSelect.appendChild(option);
 });
+
+var resultsTable = document.getElementById("results");
+drugNames.forEach(drug => {
+    const row = document.createElement("tr");
+    resultsTable.appendChild(row);
+
+    var drugCell = document.createElement("td");
+    drugCell.textContent = drug;
+    row.appendChild(drugCell);
+
+    var drugAmount = document.createElement("td");
+    drugAmount.textContent = db.getStock(drug);
+    row.appendChild(drugAmount);
+})
 
 function calculateInventory(e) {
     e.preventDefault();
