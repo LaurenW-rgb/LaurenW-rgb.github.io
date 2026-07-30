@@ -19,7 +19,7 @@ class LocalDatabase {
 
 const db = new LocalDatabase();
 
-const drugNames = ["Butorphanol", "Detomidine", "Flunixin"];
+const drugNames = ["Buscopan", "Butorphanol", "Detomidine", "Dexamethasone", "Flunixin", "Gentamycin", "Intraepicaine", "Oxytetracycline", "Penicillin", "Somulose"];
 
 var drugSelect = document.getElementById("drug");
 drugNames.forEach(drug => {
