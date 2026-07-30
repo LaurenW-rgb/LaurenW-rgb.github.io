@@ -44,7 +44,7 @@ function writeResults() {
         row.appendChild(drugCell);
 
         var drugAmount = document.createElement("td");
-        drugAmount.textContent = db.getStock(drug);
+        drugAmount.textContent = db.getStock(drug).toFixed(2);
         row.appendChild(drugAmount);
     })
 }
@@ -67,5 +67,5 @@ function calculateInventory(e) {
 
     db.changeStock(drug, delta)
     writeResults();
-    document.getElementById("newStock").textContent = "There is " + db.getStock(drug) + "ml " + drug + " in the car"
+    document.getElementById("newStock").textContent = "There is " + db.getStock(drug).toFixed(2) + "ml " + drug + " in the car"
 }
